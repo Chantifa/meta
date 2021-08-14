@@ -9,6 +9,8 @@ Das Spiel basiert auf ein PingPong-Spiel. Es ist ein Dualplayer - Spiel und kann
 1) mit dem Virus (Ball) müssen die Menschen des Gegenspielers getroffen werden
 2) mit der Impfung (Ball) müssen die Menschen wieder genehsen werden.
 
+![Skizze Coronattack](..\img\Skizze.png)
+
 Das Spiel wird auf den Webtechnologien javascript und PostgreSQL erstellt.
 
 Framework Frontend:
