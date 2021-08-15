@@ -7,7 +7,7 @@ Das Spiel basiert auf ein PingPong-Spiel. Es ist ein Dualplayer - Spiel und kann
 * Es gibt zwei Modis: 
 
 1) mit dem Virus (Ball) müssen die Menschen des Gegenspielers getroffen werden
-2) mit der Impfung (Ball) müssen die Menschen wieder genehsen werden.
+2) mit der Impfung (Ball) müssen die Menschen wieder genesen werden.
 
 ![Skizze Coronattack](../img/Skizze.png)
 
