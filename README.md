@@ -19,7 +19,7 @@ Framework Backend:
 - Express, nodejs
 
 
-Entwickler und Authoren:
+Entwickler und Autoren:
 - Thelogos Baxevanos
 - Chantale Gihara
 
