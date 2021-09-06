@@ -14,7 +14,7 @@ Rejecten oder akzeptieren. Wenn alle Spieler beigetreten sind kann das erste Spi
 1) mit dem Virus (Ball) müssen die Menschen des Gegenspielers getroffen werden
 2) mit der Impfung (Ball) müssen die Menschen wieder genesen werden.
 
-![Skizze Coronattack](../img/Skizze.png)
+![Skizze Coronattack](img/Skizze.png)
 
 Das Spiel wird auf den Webtechnologien javascript und PostgreSQL erstellt.
 
