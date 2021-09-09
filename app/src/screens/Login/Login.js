@@ -9,11 +9,11 @@ export class Login extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      username: '',
+      email: '',
       password: '',
       errors: {
-        username: 'Enter User Name!',
-        password: 'Enter Password!'
+        email: 'Enter your email!',
+        password: 'Enter your password!'
       },
       loginStatus: '',
       submitted: false
@@ -30,11 +30,11 @@ export class Login extends Component {
     const { name, value } = event.target;
     let errors = this.state.errors;
     switch (name) {
-      case 'username': 
-        errors.username = value.length < 1 ? 'Enter User Name' : '';
+      case 'email':
+        errors.email = value.length < 1 ? 'Enter your email' : '';
         break;
       case 'password': 
-        errors.password = value.length < 1 ? 'Enter Password' : '';
+        errors.password = value.length < 1 ? 'Enter your password' : '';
         break;
       default:
         break;
@@ -63,7 +63,7 @@ export class Login extends Component {
         this.props.dispatch(ActionCreators.login(user));
         this.props.history.push('/home')
       } else {
-        this.setState({ loginStatus: 'Login Failed! Invalid Username and Password'})
+        this.setState({ loginStatus: 'Login Failed! Invalid email and password'})
       }
     } else {
       console.log('Invalid Form')
@@ -71,16 +71,16 @@ export class Login extends Component {
   }
 
   render() {
-    const { username, password, errors, submitted, loginStatus } = this.state;
+    const { email, password, errors, submitted, loginStatus } = this.state;
     return (
       <div className="pagecenter loginForm">
         <form>
           <div className="row">
             <div className="col-sm-3"></div>
-            <label htmlFor="username" className="col-sm-2 col-form-label">User Name:</label>
+            <label htmlFor="username" className="col-sm-2 col-form-label">Email:</label>
             <div className="col-sm-3 mb-2">
-              <input type="text" value={username} name="username" onChange={(e) => { this.inputChange(e)} } className="form-control" id="username" placeholder="User Name" />
-              { submitted && errors.username.length > 0 &&  <span className='error'>{errors.username}</span>}
+              <input type="text" value={email} name="email" onChange={(e) => { this.inputChange(e)} } className="form-control" id="email" placeholder="email" />
+              { submitted && errors.email.length > 0 &&  <span className='error'>{errors.email}</span>}
             </div>
             <div className="col-sm-4">
             </div>

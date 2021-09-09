@@ -17,12 +17,12 @@
 .container {
   position: relative;
   height: 30vh;
-  background-color: #1b8bec;
+  background-color: #867B7B;
   min-height: 200px;
   width: 90% !important;
 }
 .profileImageSelection {
-  background-color: #1b8bec;
+  background-color: #867B7B;
   color: #fff;
   position: absolute;
   left: 50%;

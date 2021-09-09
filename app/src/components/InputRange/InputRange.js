@@ -11,12 +11,6 @@ export class InputRange extends Component {
     }
   }
 
-  componentDidMount() {
-    if(this.props.profile) {
-      this.setState({ value: this.props.profile.age });
-    }    
-  }
-
   inputChange = (e) => {
     this.setState({ value: parseInt(e.target.value) });
     this.props.onChangeInputRange(parseInt(e.target.value));

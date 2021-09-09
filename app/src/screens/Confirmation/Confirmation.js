@@ -8,7 +8,6 @@ export class Confirmation extends Component {
     return (
       <div className="row">
         <ProfileImage />
-        <Divider />
         <Approval user={this.props.profile} />
       </div>
     )

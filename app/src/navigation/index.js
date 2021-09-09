@@ -4,6 +4,8 @@ import Login from '../screens/Login';
 import Home from '../screens/Home';
 import Register from '../screens/Register';
 import Confirmation from '../screens/Confirmation';
+import CreateGame from '../screens/CreateGame';
+import JoinGame from '../screens/CreateGame/components/Join';
 import { AuthContext } from '../context/auth';
 import { getStore } from '../utils';
 
