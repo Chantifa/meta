@@ -2,46 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9837562d-e24c-476e-9354-d6bfa8f44208" name="Default Changelist" comment="Registering draft no interaction at the moment">
-      <change afterPath="$PROJECT_DIR$/app/src/components/GameFrame/GameFrame.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/components/GameFrame/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/components/GameFrame/style.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/screens/CreateGame/CreateGame.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/screens/CreateGame/components/Create/Create.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/screens/CreateGame/components/Create/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/screens/CreateGame/components/Create/style.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/screens/CreateGame/components/Join/Join.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/screens/CreateGame/components/Join/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/screens/CreateGame/components/Join/style.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/screens/CreateGame/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/screens/CreateGame/style.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/screens/GameOne/GameOne.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/screens/GameOne/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/screens/GameOne/style.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/screens/GameTwo/GameTwo.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/screens/GameTwo/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/screens/GameTwo/style.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/screens/HighScore/HighScore.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/screens/HighScore/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/screens/HighScore/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/components/Divider/Divider.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/components/Divider/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/components/Divider/style.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/components/Footer/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/components/Footer/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/components/Header/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/components/Header/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/components/InputRange/InputRange.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/components/InputRange/InputRange.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/components/InputRange/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/components/InputRange/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/components/ProfileImage/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/components/ProfileImage/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/components/Welcome/Welcome.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/components/Welcome/Welcome.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/components/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/components/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/navigation/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/navigation/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/screens/Confirmation/Confirmation.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/screens/Confirmation/Confirmation.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/screens/Home/Home.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/screens/Home/Home.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/screens/Login/Login.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/screens/Login/Login.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/screens/Login/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/screens/Login/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/screens/Register/Register.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/screens/Register/Register.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/screens/Register/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/screens/Register/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/styles/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/styles/main.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/screens/About/about.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/screens/About/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/screens/About/style.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,8 +18,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="HTML File" />
-        <option value="JavaScript File" />
         <option value="CSS File" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -148,7 +111,7 @@
       <workItem from="1630921617983" duration="9551000" />
       <workItem from="1631081069761" duration="8789000" />
       <workItem from="1631131980081" duration="215000" />
-      <workItem from="1631170740768" duration="6764000" />
+      <workItem from="1631170740768" duration="7070000" />
     </task>
     <task id="LOCAL-00001" summary="doc">
       <created>1628948666906</created>
@@ -199,7 +162,14 @@
       <option name="project" value="LOCAL" />
       <updated>1631131881744</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Register and Login style not complete">
+      <created>1631177719350</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1631177719350</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -225,6 +195,7 @@
     <MESSAGE value="react library integration" />
     <MESSAGE value="updated react folder" />
     <MESSAGE value="Registering draft no interaction at the moment" />
-    <option name="LAST_COMMIT_MESSAGE" value="Registering draft no interaction at the moment" />
+    <MESSAGE value="Register and Login style not complete" />
+    <option name="LAST_COMMIT_MESSAGE" value="Register and Login style not complete" />
   </component>
 </project>
