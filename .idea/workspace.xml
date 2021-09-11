@@ -4,19 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9837562d-e24c-476e-9354-d6bfa8f44208" name="Default Changelist" comment="refactoring packages">
+    <list default="true" id="9837562d-e24c-476e-9354-d6bfa8f44208" name="Default Changelist" comment="style adaption">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/components/Footer/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/components/Footer/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/components/Header/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/components/Header/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/components/UserDetails/UserDetails.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/components/UserDetails/UserDetails.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/pages/Home/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/pages/Home/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/pages/Login/Login.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/pages/Login/Login.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/pages/Login/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/pages/Login/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/pages/Register/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/pages/Register/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/styles/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/styles/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -115,7 +105,7 @@
       <workItem from="1631183779325" duration="1754000" />
       <workItem from="1631271968042" duration="6042000" />
       <workItem from="1631352201411" duration="2936000" />
-      <workItem from="1631361934067" duration="6140000" />
+      <workItem from="1631361934067" duration="6542000" />
     </task>
     <task id="LOCAL-00001" summary="doc">
       <created>1628948666906</created>
@@ -187,7 +177,14 @@
       <option name="project" value="LOCAL" />
       <updated>1631364071892</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="style adaption">
+      <created>1631369221509</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1631369221509</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -216,6 +213,7 @@
     <MESSAGE value="Register and Login style not complete" />
     <MESSAGE value="About folder added" />
     <MESSAGE value="refactoring packages" />
-    <option name="LAST_COMMIT_MESSAGE" value="refactoring packages" />
+    <MESSAGE value="style adaption" />
+    <option name="LAST_COMMIT_MESSAGE" value="style adaption" />
   </component>
 </project>

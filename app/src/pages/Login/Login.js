@@ -77,7 +77,7 @@ export class Login extends Component {
       <div className="pagecenter loginForm">
         <form>
           <div className="row">
-            <div className="col-sm-3"></div>
+            <div className="col-sm-3"/>
             <label htmlFor="username" className="col-sm-2 col-form-label">Email:</label>
             <div className="col-sm-3 mb-2">
               <input type="text" value={email} name="email" onChange={(e) => { this.inputChange(e)} } className="form-control" id="email" placeholder="email" />
@@ -87,20 +87,20 @@ export class Login extends Component {
             </div>
           </div>
           <div className="row">
-            <div className="col-sm-3"></div>
+            <div className="col-sm-3"/>
             <label htmlFor="password" className="col-sm-2 col-form-label">Password:</label>
-            <div className="col-sm-3 mb-2">
+            <div className="col-sm-3 mb-2" >
               <input type="password" value={password} autoComplete="on" name="password" onChange={(e) => { this.inputChange(e)} } className="form-control" id="password" placeholder="Password" />
               { submitted && errors.password.length > 0 &&  <span className='error'>{errors.password}</span>}
             </div>
-            <div className="col-sm-4"></div>
+            <div className="col-sm-4"/>
           </div>
           <div className="row">
             <div className="col-sm-12 center mt-1">
               { submitted && loginStatus.length > 0 &&  <span className='error'>{loginStatus}</span>}
             </div>
           </div>
-          <div className="row">
+          <div className="row" >
             <div className="col-sm-12 center mt-2">
               <button type="submit" className="btn btn-secondary btn-lg" onClick={route.change} style={{backgroundColor:"#D66767"}}>Register</button>
               <button type="submit" className="btn btn-secondary btn-lg m-5" onClick={this.loginForm} style={{backgroundColor:"#85BE7C"}}>Login</button>
