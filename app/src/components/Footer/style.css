@@ -7,7 +7,7 @@ footer {
   display: flex !important;
   align-items: center;
   justify-content: center;
-  background-color: #ffffff;
-  color: #867B7B;
+  background-color: #C4C4C4;
+  color: white;
   /* background-image: linear-gradient(#daf5ff, transparent, transparent); */
 }

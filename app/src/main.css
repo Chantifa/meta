@@ -1,6 +1,4 @@
 html, body {
-  height: 100% !important;
-  margin: 0;
   background-color: #867B7B;
 }
 .form-control, .col-form-label, .custom-select, label, header, footer {

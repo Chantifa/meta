@@ -74,8 +74,8 @@ export class Login extends Component {
   render() {
     const { email, password, errors, submitted, loginStatus } = this.state;
     return (
-      <div className="pagecenter loginForm">
-        <form>
+      <div>
+        <form className="pagecenter loginForm">
           <div className="row">
             <div className="col-sm-3"/>
             <label htmlFor="username" className="col-sm-2 col-form-label">Email:</label>
