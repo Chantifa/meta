@@ -1,6 +1,6 @@
 .loginForm {
   background-color: #867B7B;
-  width: 70%;
+  width: 40%;
   border-style: groove;
   border-width: 2 px;
   padding: 30px;
@@ -13,5 +13,14 @@
 
 .buttonSize{
   width: 20%;
-  height: 30%;
+}
+
+.buttonsContainer{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.inputSize {
+  width: 100%;
 }
