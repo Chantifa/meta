@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import Approval from './components/Approval';
-import { ProfileImage } from '../../components';
+import Approval from './Approval/Approval.js';
+import { ProfileImage } from '../components';
 
 export class Confirmation extends Component {
   render() {
