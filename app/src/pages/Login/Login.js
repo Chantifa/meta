@@ -76,7 +76,7 @@ export class Login extends Component {
     return (
       <div>
         <form className="pagecenter loginForm">
-
+          <div className="loginStyle">User Log In</div>
           <div className="row">
             <div className="col-sm-2"/>
             <label htmlFor="username" className="col-sm-2 col-form-label labelColor">Email:</label>
