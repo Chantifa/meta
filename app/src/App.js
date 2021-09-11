@@ -4,7 +4,7 @@ import { Header, Footer } from './components';
 import Navigation from './routing';
 import { getStore } from './utils';
 import { ActionCreators } from './services/actions/profile';
-import './styles';
+import './index';
 
 class App extends React.Component {
   componentDidMount() {

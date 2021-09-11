@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
 import { withRouter} from "react-router-dom";
 import { connect } from 'react-redux';
-import { ActionCreators } from '../../actions/profile';
+import { ActionCreators } from '../../services/actions/profile';
 import { getStore } from '../../utils';
 import './style.css';
+import {route} from "express/lib/router";
 
 export class Login extends Component {
   constructor(props) {
@@ -101,15 +102,9 @@ export class Login extends Component {
           </div>
           <div className="row">
             <div className="col-sm-12 center mt-2">
-              <button type="submit" className="button" onClick={this.loginForm}>Login</button>
+              <button type="submit" className="btn btn-secondary btn-lg" onClick={route.change} style={{backgroundColor:"#D66767"}}>Register</button>
+              <button type="submit" className="btn btn-secondary btn-lg m-5" onClick={this.loginForm} style={{backgroundColor:"#85BE7C"}}>Login</button>
             </div>
-          </div>
-          <div className="row">
-            <div className="col-sm-4 mt-2"></div>
-            <div className="col-sm-4 right">
-              <a href="/register">Register</a>
-            </div>
-            <div className="col-sm-4 mt-2"></div>
           </div>
         </form>
       </div>

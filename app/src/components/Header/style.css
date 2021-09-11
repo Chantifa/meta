@@ -3,8 +3,8 @@ header {
   display: flex !important;
   align-items: center;
   justify-content: center;
-  color: #282c34;
+  color: #867B7B;
   /* background-image: linear-gradient(#daf5ff, transparent, transparent); */
-  background-color: #C4C4C4;
+  background-color: #ffffff;
   border-bottom: 1px solid #daf5ff;
 }

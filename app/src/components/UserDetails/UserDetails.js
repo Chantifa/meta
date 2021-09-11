@@ -7,7 +7,8 @@ export class UserDetails extends Component {
     const { firstName, lastName,email } = this.props.user
     return (
       <div>
-        <div>I am <span className="bindtext">{firstName} {lastName}</span> <span className="bindtext">{email}</span></div>
+        <div>I am <span className="bindtext">{firstName} {lastName}</span>
+          <span className="bindtext">{email}</span></div>
       </div>
     )
   }
