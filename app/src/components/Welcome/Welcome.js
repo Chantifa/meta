@@ -5,7 +5,9 @@ import './style.css';
 export class Welcome extends Component {
     render() {
         return (
-            <div className="marquee"><p>Welcome {this.props.user.firstName} {this.props.user.lastName} !</p></div>
+            <div className="marquee">
+                <p>Welcome {this.props.user.firstName} {this.props.user.lastName} !</p>
+            </div>
         )
     }
 }
