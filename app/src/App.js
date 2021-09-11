@@ -1,9 +1,9 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { Header, Footer } from './components';
-import Navigation from './navigation';
+import Navigation from './routing';
 import { getStore } from './utils';
-import { ActionCreators } from './actions/profile';
+import { ActionCreators } from './services/actions/profile';
 import './styles';
 
 class App extends React.Component {

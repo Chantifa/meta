@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { withRouter} from "react-router-dom";
 import { connect } from 'react-redux';
-import { ActionCreators } from '../../../../actions/profile';
+import { ActionCreators } from '../../../../services/actions/profile';
 import './style.css';
 import {isValidEmail} from "../../../../utils";
 
@@ -53,6 +53,7 @@ export class RightContent extends Component {
   }
 
   inputChange = (event) => {
+    // eslint-disable-next-line
     const { name, value } = event.target;
     const user = this.state.user;
     this.setState({ user });

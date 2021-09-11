@@ -1,10 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="9837562d-e24c-476e-9354-d6bfa8f44208" name="Default Changelist" comment="Registering draft no interaction at the moment">
-      <change afterPath="$PROJECT_DIR$/app/src/screens/About/about.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/screens/About/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/screens/About/style.css" afterDir="false" />
+    <list default="true" id="9837562d-e24c-476e-9354-d6bfa8f44208" name="Default Changelist" comment="refactoring packages">
+      <change afterPath="$PROJECT_DIR$/.idea/runConfigurations.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/components/GameFrame/GameFrame.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/components/GameFrame/GameFrame.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/components/GameFrame/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/components/GameFrame/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/components/InputRange/InputRange.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/components/InputRange/InputRange.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/components/ProfileImage/ProfileImage.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/components/ProfileImage/ProfileImage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/pages/Confirmation/Confirmation.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/pages/Confirmation/Confirmation.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/pages/Login/Login.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/pages/Login/Login.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/pages/Register/Register.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/pages/Register/Register.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/pages/Register/components/RightContent/RightContent.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/pages/Register/components/RightContent/RightContent.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/routing/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/routing/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/serviceWorker.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/serviceWorker.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,7 +51,7 @@
     <option name="selectedIndex" value="1" />
   </component>
   <component name="ProjectCodeStyleSettingsMigration">
-    <option name="version" value="1" />
+    <option name="version" value="2" />
   </component>
   <component name="ProjectId" id="1wiju1miRDuWTChOn1tikfL44oh" />
   <component name="ProjectLevelVcsManager">
@@ -79,19 +94,6 @@
       <recent name="C:\Users\chant\IdeaProjects\coronattack\app\src\screens\Confirmation\components" />
     </key>
   </component>
-  <component name="RunManager">
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -111,7 +113,11 @@
       <workItem from="1630921617983" duration="9551000" />
       <workItem from="1631081069761" duration="8789000" />
       <workItem from="1631131980081" duration="215000" />
-      <workItem from="1631170740768" duration="7070000" />
+      <workItem from="1631170740768" duration="7664000" />
+      <workItem from="1631183779325" duration="1754000" />
+      <workItem from="1631271968042" duration="6042000" />
+      <workItem from="1631352201411" duration="2936000" />
+      <workItem from="1631361934067" duration="1850000" />
     </task>
     <task id="LOCAL-00001" summary="doc">
       <created>1628948666906</created>
@@ -169,7 +175,14 @@
       <option name="project" value="LOCAL" />
       <updated>1631177719350</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="About folder added">
+      <created>1631177982708</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1631177982708</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -196,6 +209,8 @@
     <MESSAGE value="updated react folder" />
     <MESSAGE value="Registering draft no interaction at the moment" />
     <MESSAGE value="Register and Login style not complete" />
-    <option name="LAST_COMMIT_MESSAGE" value="Register and Login style not complete" />
+    <MESSAGE value="About folder added" />
+    <MESSAGE value="refactoring packages" />
+    <option name="LAST_COMMIT_MESSAGE" value="refactoring packages" />
   </component>
 </project>

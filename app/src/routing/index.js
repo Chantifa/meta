@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
 import { BrowserRouter as Router, Route, Redirect, Switch } from 'react-router-dom';
-import Login from '../screens/Login';
-import Home from '../screens/Home';
-import Register from '../screens/Register';
-import Confirmation from '../screens/Confirmation';
-//import CreateGame from '../screens/CreateGame';
-//import JoinGame from '../screens/CreateGame/components/Join';
-import { AuthContext } from '../context/auth';
+import Login from '../pages/Login';
+import Home from '../pages/Home';
+import Register from '../pages/Register';
+import Confirmation from '../pages/Confirmation';
+//import CreateGame from '../pages/CreateGame';
+//import JoinGame from '../pages/CreateGame/components/Join';
+import { AuthContext } from '../services/context/auth';
 import { getStore } from '../utils';
 
 function AuthenticatedRoute ({component: Component, ...rest}) {

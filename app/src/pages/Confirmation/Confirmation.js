@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import Approval from './components/Approval';
-import { Divider, ProfileImage } from '../../components';
+import { ProfileImage } from '../../components';
 
 export class Confirmation extends Component {
   render() {

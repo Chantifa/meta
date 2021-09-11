@@ -4,7 +4,7 @@ import './style.css';
 export class GameFrame extends Component {
     render() {
         return (
-            <frameset className="gameframe"/>
+            <frameset className="gameFrame"/>
         )
     }
 }

@@ -21,7 +21,6 @@ export class InputRange extends Component {
       <div>
         <span className="input-range__label--min"><span className="input-range__label-container">{this.props.min}</span></span>
         <div>
-          <input type="range" style={{width: '92%', margin: '0 15px'}} min={this.props.min} max={this.props.max} value={this.state.value} name="age" onChange={(e) => {this.inputChange(e)}} step={this.props.step} className="form-control-plaintext rangeSlider" />
           <span className="rangevalue" style={{marginLeft: this.state.value * 5 + 'px'}}>{this.state.value}</span>
         </div>
         <span className="input-range__label--max"><span className="input-range__label-container">{this.props.max}</span></span>

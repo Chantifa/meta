@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Divider, ProfileImage } from '../../components';
+import { ProfileImage } from '../../components';
 import {RightContent} from "./components/RightContent/RightContent";
 import './style.css';
 
