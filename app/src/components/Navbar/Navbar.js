@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './style.css';
 
-export class Header extends Component {
+export class Navbar extends Component {
   render() {
     return (
       <header>User - Registration</header>
@@ -9,4 +9,4 @@ export class Header extends Component {
   }
 }
 
-export default Header;
+export default Navbar;
