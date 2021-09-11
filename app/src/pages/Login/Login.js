@@ -78,7 +78,7 @@ export class Login extends Component {
         <form className="pagecenter loginForm">
           <div className="row">
             <div className="col-sm-3"/>
-            <label htmlFor="username" className="col-sm-2 col-form-label">Email:</label>
+            <label htmlFor="username" className="col-sm-2 col-form-label labelColor">Email:</label>
             <div className="col-sm-3 mb-2">
               <input type="text" value={email} name="email" onChange={(e) => { this.inputChange(e)} } className="form-control" id="email" placeholder="email" />
               { submitted && errors.email.length > 0 &&  <span className='error'>{errors.email}</span>}
@@ -88,7 +88,7 @@ export class Login extends Component {
           </div>
           <div className="row">
             <div className="col-sm-3"/>
-            <label htmlFor="password" className="col-sm-2 col-form-label">Password:</label>
+            <label htmlFor="password" className="col-sm-2 col-form-label labelColor">Password:</label>
             <div className="col-sm-3 mb-2" >
               <input type="password" value={password} autoComplete="on" name="password" onChange={(e) => { this.inputChange(e)} } className="form-control" id="password" placeholder="Password" />
               { submitted && errors.password.length > 0 &&  <span className='error'>{errors.password}</span>}
@@ -102,8 +102,8 @@ export class Login extends Component {
           </div>
           <div className="row" >
             <div className="col-sm-12 center mt-2">
-              <button type="submit" className="btn btn-secondary btn-lg" onClick={route.change} style={{backgroundColor:"#D66767"}}>Register</button>
-              <button type="submit" className="btn btn-secondary btn-lg m-5" onClick={this.loginForm} style={{backgroundColor:"#85BE7C"}}>Login</button>
+              <button type="submit" className="btn btn-secondary buttonSize m-5 " onClick={route.change} style={{backgroundColor:"#D66767"}}>Register</button>
+              <button type="submit" className="btn btn-secondary buttonSize m-5 " onClick={this.loginForm} style={{backgroundColor:"#85BE7C"}}>Login</button>
             </div>
           </div>
         </form>

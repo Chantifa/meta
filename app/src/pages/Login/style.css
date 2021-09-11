@@ -2,11 +2,16 @@
   background-color: #867B7B;
   width: 70%;
   border-style: groove;
+  border-width: 2 px;
   padding: 30px;
   margin: 10px;
-  
-  
-  
+}
 
-  
+.labelColor{
+  color: white;
+}
+
+.buttonSize{
+  width: 20%;
+  height: 30%;
 }
