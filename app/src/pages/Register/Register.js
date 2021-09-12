@@ -7,7 +7,7 @@ export class Register extends Component {
   render() {
     return (
       <div className="row">
-        <div className="loginStyle" style={{backgroundColor:'#867B7B'}}>User Registration</div>
+        <div className="registerStyle" style={{backgroundColor:'#867B7B'}}>User Registration</div>
         <ProfileImage />
         <RightContent />
       </div>

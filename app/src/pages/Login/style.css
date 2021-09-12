@@ -29,9 +29,8 @@
 .loginStyle{
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: center; 
   color: white;
-  margin-bottom: 30px;
-  border-radius: 25px;
   border: 1px solid white;
+  padding: 50px;
 }

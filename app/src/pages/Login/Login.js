@@ -75,8 +75,8 @@ export class Login extends Component {
     const { email, password, errors, submitted, loginStatus } = this.state;
     return (
       <div>
+        <div className="loginStyle" style={{backgroundColor:'#867B7B'}}>User Sign In</div>
         <form className="pagecenter loginForm">
-          <div className="loginStyle">User Log In</div>
           <div className="row">
             <div className="col-sm-2"/>
             <label htmlFor="username" className="col-sm-2 col-form-label labelColor">Email:</label>

@@ -104,10 +104,12 @@ export class RightContent extends Component {
     const { firstName, lastName, email} = this.state.user;
     const { submitted } = this.state;
     return (
+
       <div className="rightPanel">
+
         <div className="row">
-          <label className="col-sm-2 col-form-label">Name</label>
-          <div className="col-sm-3 mb-2">
+          <label className="col-sm-3 col-form-label">Name:</label>
+          <div className="col-sm-3 mb-5">
             <input type="text" value={firstName} name="firstName" onChange={(e) => { this.inputChange(e)} } className="form-control" placeholder="First Name" />
             { submitted && this.state.errors.user.firstName.length > 0 &&  <span className='error'>{this.state.errors.user.firstName}</span>}
           </div>
@@ -117,15 +119,17 @@ export class RightContent extends Component {
           <div className="col-sm-4">
           </div>
         </div>
+
         <div className="row">
-          <label htmlFor="email" className="col-sm-2 col-form-label">Email</label>
-          <div className="col-sm-6 mb-2">
+          <label htmlFor="email" className="col-sm-3 col-form-label">Email:</label>
+          <div className="col-sm-6 mb-5">
             <input type="email" value={email} name="email" onChange={(e) => { this.inputChange(e)} } className="form-control" id="email" placeholder="coronattack@gmail.com" />
             { submitted && this.state.errors.user.email.length > 0 &&  <span className='error'>{this.state.errors.user.email}</span>}
           </div>
           <div className="col-sm-4">
           </div>
         </div>
+
         <div className="row">
           <div className="col-sm-5 mb-2">
           </div>

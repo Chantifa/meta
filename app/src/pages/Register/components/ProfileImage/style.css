@@ -1,8 +1,6 @@
 .leftPanel {
-  /* padding: 20px; */
-  margin: 10px;
-  float: left;
-  width: 20%;
+  background-color: #867B7B;
+  padding: 60px;
 }
 .profileImage {
   height: 150px;
@@ -14,24 +12,26 @@
   transform: translate(-50%, -50%);
   cursor: pointer;
 }
+
 .container {
   position: relative;
-  height: 30vh;
+  height: 50px;
   background-color: #867B7B;
-  min-height: 200px;
-  width: 90% !important;
 }
+
 .profileImageSelection {
-  background-color: #867B7B;
+  background-color: #C4C4C4;;
   color: #fff;
   position: absolute;
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
-  border: none;
   text-decoration: underline;
   height: 100%;
-  width: 100%;
+  width: 20%;
+  border-radius: 25px;
+  border: 1px solid white;
+  margin: 10px;
 }
 .editProfile {
   text-align: center;
@@ -47,5 +47,6 @@
   .leftPanel {
     width: 100%;
     margin: 10px;
+    
   }
 }
