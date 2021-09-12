@@ -4,6 +4,7 @@ import { connect } from 'react-redux';
 import { ActionCreators } from '../../../../services/actions/profile';
 import './style.css';
 import {isValidEmail} from "../../../../utils";
+import { Link } from 'react-router-dom';
 
 export class RightContent extends Component {
   constructor(props) {
@@ -133,7 +134,10 @@ export class RightContent extends Component {
         <div className="row">
           <div className="col-sm-5 mb-2">
           </div>
-          <div className="col-sm-4">
+          <div className="buttonsContainer">
+            <Link to="/">
+            <button type="button" className="button" style={{backgroundColor:'#D66767'}}>Back</button>
+            </Link>
             <button type="button" className="button" onClick={this.submitForm}>Submit</button>
           </div>
           <div className="col-sm-3"></div>

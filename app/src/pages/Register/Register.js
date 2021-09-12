@@ -8,8 +8,8 @@ export class Register extends Component {
     return (
       <div className="row">
         <div className="registerStyle" style={{backgroundColor:'#867B7B'}}>User Registration</div>
-        <ProfileImage />
-        <RightContent />
+          <ProfileImage />
+          <RightContent />
       </div>
     )
   }

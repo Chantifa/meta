@@ -4,7 +4,7 @@ import { connect } from 'react-redux';
 import { ActionCreators } from '../../services/actions/profile';
 import { getStore } from '../../utils';
 import './style.css';
-import {route} from "express/lib/router";
+import { Link } from 'react-router-dom';
 
 export class Login extends Component {
   constructor(props) {
@@ -104,8 +104,10 @@ export class Login extends Component {
           </div>
 
           <div className="row">
-            <div className="col-sm-12 center buttonsContainer">
-              <button type="submit" className="btn btn-secondary buttonSize" onClick={route.change} style={{backgroundColor:"#D66767"}}>Register</button>
+            <div className="loginButtonsContainer">
+              <Link to="/register" className=" buttonSize">
+              <button type="button" className="btn btn-secondary buttonSize"  style={{backgroundColor:"#D66767"}}>Register</button>
+              </Link>
               <button type="submit" className="btn btn-secondary buttonSize " onClick={this.loginForm} style={{backgroundColor:"#85BE7C"}}>Login</button>
             </div>
           </div>

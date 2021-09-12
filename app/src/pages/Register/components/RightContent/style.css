@@ -6,6 +6,7 @@
   height: 80vh; 
   overflow:auto;
   background-color: #867B7B;
+  
 }
 .col-form-label {
   text-align: right;
@@ -22,3 +23,9 @@
     margin-bottom: 50px;
   }
 } 
+
+.buttonsContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly; 
+}

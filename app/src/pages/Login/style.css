@@ -13,13 +13,11 @@
 
 .buttonSize{
   width: 100%;
-  margin: 5px;
 }
 
-.buttonsContainer{
+.loginButtonsContainer{
   display: flex;
   flex-direction: row;
-  justify-content: space-evenly;
 }
 
 .inputSize {
