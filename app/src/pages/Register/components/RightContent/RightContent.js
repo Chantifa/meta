@@ -3,7 +3,7 @@ import { withRouter} from "react-router-dom";
 import { connect } from 'react-redux';
 import { ActionCreators } from '../../../../services/actions/profile';
 import './style.css';
-import {isValidEmail} from "../../../../utils";
+import {isValidEmail, isValidPassword} from "../../../../utils";
 import { Link } from 'react-router-dom';
 
 export class RightContent extends Component {
@@ -14,11 +14,14 @@ export class RightContent extends Component {
         firstName: '',
         lastName: '',
         email: '',
+        password: ''
       },
       errors: {
         user: {
           firstName: 'Enter First Name',
+          lastName:'Enter Last Name',
           email: 'Email is not valid!',
+          password: 'please enter a valid password'
         }
       },
       validForm: false,
@@ -31,6 +34,9 @@ export class RightContent extends Component {
       this.setState({ user: this.props.profile });
       if (this.props.profile.email) {
         this.resetErrorMsg();
+      }
+      if(this.props.profile.password){
+        this.resetErrorMsg()
       }
     }
   }
@@ -46,6 +52,8 @@ export class RightContent extends Component {
       case 'email': 
         errors.user.email = isValidEmail(value) ? '' : 'Email is not valid!';
         break;
+      case 'password':
+        errors.user.password = isValidPassword(value)?'':'Password is not valid!'
       default:
         break;
     }
@@ -102,7 +110,7 @@ export class RightContent extends Component {
   }
 
   render() {
-    const { firstName, lastName, email} = this.state.user;
+    const { firstName, lastName, email, password} = this.state.user;
     const { submitted } = this.state;
     return (
 
@@ -131,6 +139,24 @@ export class RightContent extends Component {
           </div>
         </div>
 
+        <div className="row">
+          <label htmlFor="email" className="col-sm-3 col-form-label">Email confirmation:</label>
+          <div className="col-sm-6 mb-5">
+            <input type="email" value={email} name="email" onChange={(e) => { this.inputChange(e)} } className="form-control" id="email" placeholder="coronattack@gmail.com" />
+            { submitted && this.state.errors.user.email.length > 0 &&  <span className='error'>{this.state.errors.user.email}</span>}
+          </div>
+          <div className="col-sm-4">
+          </div>
+        </div>
+        <div className="row">
+          <label htmlFor="password" className="col-sm-3 col-form-label">password:</label>
+          <div className="col-sm-6 mb-5">
+            <input type="password" value={password} name="password" onChange={(e) => { this.inputChange(e)} } className="form-control" id="password" placeholder="********" />
+            { submitted && this.state.errors.user.password > 0 &&  <span className='error'>{this.state.errors.user.password}</span>}
+          </div>
+          <div className="col-sm-4">
+          </div>
+        </div>
         <div className="row">
           <div className="col-sm-5 mb-2">
           </div>
