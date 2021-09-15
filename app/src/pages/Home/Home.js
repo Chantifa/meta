@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { ProfileImage, UserDetails, Welcome , GameFrame} from '../../components';
+import {  UserDetails, Welcome , GameFrame} from '../../components';
+import { ProfileImage } from '../Register/components/ProfileImage/callProfile.js';
 
 export class Home extends Component {
   render() {

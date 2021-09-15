@@ -5,6 +5,7 @@ const initialState = {
     firstName: '',
     lastName: '',
     email: '',
+    password: ''
   },
   formSubmitted: false
 }

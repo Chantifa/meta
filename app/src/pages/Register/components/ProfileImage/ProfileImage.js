@@ -2,8 +2,8 @@ import React, { Component, createRef } from 'react';
 import { connect } from 'react-redux';
 import { NavLink } from 'react-router-dom';
 import { withRouter} from "react-router-dom";
-import { ActionCreators } from '../../services/actions/profile';
-import { getStore } from '../../utils';
+import { ActionCreators } from '../../../../services/actions/profile';
+import { getStore } from '../../../../utils';
 import './style.css';
 
 export class ProfileImage extends Component {
@@ -71,3 +71,4 @@ const mapStateToProps = (state) => {
 }
 
 export default connect(mapStateToProps)(withRouter(ProfileImage));
+
