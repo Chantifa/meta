@@ -4,14 +4,26 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9837562d-e24c-476e-9354-d6bfa8f44208" name="Default Changelist" comment="style adaption">
+    <list default="true" id="4c5d1cdd-dabd-4de7-9658-43551f2a2c1c" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/app/.dockerignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/docker-compose.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/Dockerfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/package-lock.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/storage/Dockerfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/pages/Login/Login.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/pages/Login/Login.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/package-lock.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/routing/index.js" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CodeInsightWorkspaceSettings">
+    <option name="optimizeImportsOnTheFly" value="true" />
   </component>
   <component name="CodeStyleSettingsInfer">
     <option name="done" value="true" />
@@ -32,7 +44,6 @@
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-    <option name="UPDATE_TYPE" value="REBASE" />
   </component>
   <component name="ProblemsViewState">
     <option name="selectedIndex" value="1" />
@@ -41,9 +52,6 @@
     <option name="version" value="2" />
   </component>
   <component name="ProjectId" id="1wiju1miRDuWTChOn1tikfL44oh" />
-  <component name="ProjectLevelVcsManager">
-    <ConfirmationsSetting value="2" id="Add" />
-  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -56,9 +64,11 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1631624185085" />
+    <property name="go.gopath.indexing.explicitly.defined" value="true" />
     <property name="javascript.nodejs.core.library.configured.version" value="14.17.6" />
     <property name="javascript.nodejs.core.library.typings.version" value="14.17.6" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/app/src/screens/Register/components" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/app/src" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
@@ -67,25 +77,107 @@
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="settings.editor.selected.configurable" value="Docker" />
     <property name="ts.external.directory.path" value="C:\Program Files\JetBrains\IntelliJ IDEA 2020.2\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\u216983\IdeaProjects\coronattack\app\src" />
+      <recent name="C:\Users\u216983\IdeaProjects\coronattack\app" />
+      <recent name="C:\Users\u216983\IdeaProjects\coronattack\app\src\storage" />
       <recent name="C:\Users\chant\IdeaProjects\coronattack\app\src\screens\Register\components" />
       <recent name="C:\Users\chant\IdeaProjects\coronattack\app\src" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\chant\IdeaProjects\coronattack\app\src\frontend" />
       <recent name="C:\Users\chant\IdeaProjects\coronattack\app\src" />
+      <recent name="C:\Users\u216983\IdeaProjects\coronattack\app" />
       <recent name="C:\Users\chant\IdeaProjects\coronattack\app\src\screens\CreateGame\components" />
       <recent name="C:\Users\chant\IdeaProjects\coronattack\app\src\screens\CreateGame" />
-      <recent name="C:\Users\chant\IdeaProjects\coronattack\app\" />
-      <recent name="C:\Users\chant\IdeaProjects\coronattack" />
     </key>
   </component>
+  <component name="RunManager" selected="Docker.src/Dockerfile">
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="app: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
+      <deployment type="docker-compose.yml">
+        <settings>
+          <option name="sourceFilePath" value="app/docker-compose.yml" />
+        </settings>
+      </deployment>
+      <method v="2" />
+    </configuration>
+    <configuration name="app/Dockerfile" type="docker-deploy" factoryName="dockerfile" temporary="true" server-name="Docker">
+      <deployment type="dockerfile">
+        <settings>
+          <option name="sourceFilePath" value="app/Dockerfile" />
+        </settings>
+      </deployment>
+      <method v="2" />
+    </configuration>
+    <configuration name="app.src: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
+      <deployment type="docker-compose.yml">
+        <settings>
+          <option name="services">
+            <list>
+              <option value="src" />
+            </list>
+          </option>
+          <option name="sourceFilePath" value="app/docker-compose.yml" />
+        </settings>
+      </deployment>
+      <method v="2" />
+    </configuration>
+    <configuration name="app.storage: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
+      <deployment type="docker-compose.yml">
+        <settings>
+          <option name="services">
+            <list>
+              <option value="storage" />
+            </list>
+          </option>
+          <option name="sourceFilePath" value="app/docker-compose.yml" />
+        </settings>
+      </deployment>
+      <method v="2" />
+    </configuration>
+    <configuration name="src/Dockerfile" type="docker-deploy" factoryName="dockerfile" temporary="true" server-name="Docker">
+      <deployment type="dockerfile">
+        <settings>
+          <option name="sourceFilePath" value="app/src/Dockerfile" />
+        </settings>
+      </deployment>
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Docker.src/Dockerfile" />
+        <item itemvalue="Docker.app: Compose Deployment" />
+        <item itemvalue="Docker.app.src: Compose Deployment" />
+        <item itemvalue="Docker.app/Dockerfile" />
+        <item itemvalue="Docker.app.storage: Compose Deployment" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="9837562d-e24c-476e-9354-d6bfa8f44208" name="Default Changelist" comment="" />
+      <changelist id="4c5d1cdd-dabd-4de7-9658-43551f2a2c1c" name="Default Changelist" comment="" />
       <created>1628948522207</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
@@ -106,6 +198,9 @@
       <workItem from="1631271968042" duration="6042000" />
       <workItem from="1631352201411" duration="2936000" />
       <workItem from="1631361934067" duration="6542000" />
+      <workItem from="1631625080076" duration="120000" />
+      <workItem from="1631625706778" duration="6174000" />
+      <workItem from="1631697861514" duration="7712000" />
     </task>
     <task id="LOCAL-00001" summary="doc">
       <created>1628948666906</created>
@@ -200,10 +295,23 @@
         </entry>
       </map>
     </option>
+    <option name="RECENT_FILTERS">
+      <map>
+        <entry key="Branch">
+          <value>
+            <list />
+          </value>
+        </entry>
+        <entry key="User">
+          <value>
+            <list />
+          </value>
+        </entry>
+      </map>
+    </option>
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="doc" />
     <MESSAGE value="Read me update" />
     <MESSAGE value="components / .gitignore / index.html" />
@@ -215,5 +323,106 @@
     <MESSAGE value="refactoring packages" />
     <MESSAGE value="style adaption" />
     <option name="LAST_COMMIT_MESSAGE" value="style adaption" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="-1195" y="224" key="#Docker" timestamp="1631713244025">
+      <screen x="-1920" y="0" width="1920" height="1040" />
+    </state>
+    <state x="-1195" y="224" key="#Docker/-1920.0.1920.1040/0.0.1920.1040@-1920.0.1920.1040" timestamp="1631713244025" />
+    <state x="-1082" y="436" key="#Environment_variables" timestamp="1631709821926">
+      <screen x="-1920" y="0" width="1920" height="1040" />
+    </state>
+    <state x="-1082" y="436" key="#Environment_variables/-1920.0.1920.1040/0.0.1920.1040@-1920.0.1920.1040" timestamp="1631709821926" />
+    <state x="-1164" y="403" key="#Push_Image" timestamp="1631707004479">
+      <screen x="-1920" y="0" width="1920" height="1040" />
+    </state>
+    <state x="-1164" y="403" key="#Push_Image/-1920.0.1920.1040/0.0.1920.1040@-1920.0.1920.1040" timestamp="1631707004479" />
+    <state x="-1213" y="310" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1631712888825">
+      <screen x="-1920" y="0" width="1920" height="1040" />
+    </state>
+    <state x="-1213" y="310" key="#com.intellij.fileTypes.FileTypeChooser/-1920.0.1920.1040/0.0.1920.1040@-1920.0.1920.1040" timestamp="1631712888825" />
+    <state x="461" y="165" key="SettingsEditor" timestamp="1631706733911">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="461" y="165" key="SettingsEditor/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1631706733911" />
+    <state x="-1143" y="430" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1631713429987">
+      <screen x="-1920" y="0" width="1920" height="1040" />
+    </state>
+    <state x="-1143" y="430" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/-1920.0.1920.1040/0.0.1920.1040@-1920.0.1920.1040" timestamp="1631713429987" />
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ArtifactsStructureConfigurable.UI">
+        <settings>
+          <artifact-editor />
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="FacetStructureConfigurable.UI">
+        <settings>
+          <last-edited>No facets are configured</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <last-edited>javafx-sdk-11.0</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ModuleStructureConfigurable.UI">
+        <settings>
+          <last-edited>coronattack</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
   </component>
 </project>
