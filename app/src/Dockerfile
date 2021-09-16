@@ -1,11 +1,9 @@
-FROM node:12.18.1
-ENV ENV PATH /src/node_modules/.bin:$PATH
-
-WORKDIR /src
+FROM node:alpine
+ENV NODE_ENV=production
 
 COPY ["package.json", "package-lock.json*", "./"]
 
-RUN npm install --production
+RUN npm install
 
 COPY . .
 
