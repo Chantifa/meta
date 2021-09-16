@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import { withRouter} from "react-router-dom";
 import PropTypes from 'prop-types';
-import { UserDetails } from '../../../../components';
-import { setStore } from '../../../../utils';
+import { UserDetails } from '../../components';
+import { setStore } from '../../utils';
 import './style.css';
 
 export class Approval extends Component {

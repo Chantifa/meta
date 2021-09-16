@@ -1,8 +1,9 @@
-.RegisterForm{
-    background-color: #867B7B;
-}
+.registerStyle{
+  display: flex;
+  flex-direction: row;
+  justify-content: center; 
+  color: white;
+  border: 1px solid white;
+  padding: 50px;
+  }
 
-body{
-    background-color: #867B7B;
-
-}
