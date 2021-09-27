@@ -13,8 +13,8 @@ export class Login extends Component {
       email: '',
       password: '',
       errors: {
-        email: 'Enter your email!',
-        password: 'Enter your password!'
+        email: 'enter your email!',
+        password: 'enter your password!'
       },
       loginStatus: '',
       submitted: false
@@ -22,20 +22,20 @@ export class Login extends Component {
   }
 
   inputChange = (event) => {
-    const { name, value } = event.target;
-    this.setState({ [name]: value });
+    const { email, value } = event.target;
+    this.setState({ [email]: value });
     this.validationErrorMessage(event);
   }
 
   validationErrorMessage = (event) => {
-    const { name, value } = event.target;
+    const { email, value } = event.target;
     let errors = this.state.errors;
-    switch (name) {
+    switch (email) {
       case 'email':
-        errors.email = value.length < 1 ? 'Enter your email' : '';
+        errors.email = value.length < 1 ? 'enter your email' : '';
         break;
       case 'password': 
-        errors.password = value.length < 1 ? 'Enter your password' : '';
+        errors.password = value.length < 1 ? 'enter your password' : '';
         break;
       default:
         break;
@@ -59,9 +59,9 @@ export class Login extends Component {
     event.preventDefault();
     if (this.validateForm(this.state.errors)) {
       console.info('Valid Form')
-      const user = getStore('user')
-      if (user) {
-        this.props.dispatch(ActionCreators.login(user));
+      const email = getStore('email')
+      if (email) {
+        this.props.dispatch(ActionCreators.login(email));
         this.props.history.push('/home')
       } else {
         this.setState({ loginStatus: 'Login Failed! Invalid email and password'})
@@ -78,7 +78,7 @@ export class Login extends Component {
         <form>
           <div className="row">
             <div className="col-sm-3"/>
-            <label htmlFor="username" className="col-sm-2 col-form-label">Email:</label>
+            <label htmlFor="username" className="col-sm-2 col-form-label">email:</label>
             <div className="col-sm-3 mb-2">
               <input type="text" value={email} name="email" onChange={(e) => { this.inputChange(e)} } className="form-control" id="email" placeholder="email" />
               { submitted && errors.email.length > 0 &&  <span className='error'>{errors.email}</span>}
@@ -88,7 +88,7 @@ export class Login extends Component {
           </div>
           <div className="row">
             <div className="col-sm-3"/>
-            <label htmlFor="password" className="col-sm-2 col-form-label">Password:</label>
+            <label htmlFor="password" className="col-sm-2 col-form-label">password:</label>
             <div className="col-sm-3 mb-2" >
               <input type="password" value={password} autoComplete="on" name="password" onChange={(e) => { this.inputChange(e)} } className="form-control" id="password" placeholder="Password" />
               { submitted && errors.password.length > 0 &&  <span className='error'>{errors.password}</span>}
