@@ -4,12 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9837562d-e24c-476e-9354-d6bfa8f44208" name="Default Changelist" comment="including password">
-      <change afterPath="$PROJECT_DIR$/app/package-lock.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/package.json" afterDir="false" />
+    <list default="true" id="9837562d-e24c-476e-9354-d6bfa8f44208" name="Default Changelist" comment="package.json moved">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/app/docker-compose.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/Dockerfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/components/UserDetails/UserDetails.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/components/UserDetails/UserDetails.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/pages/About/about.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/pages/About/about.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/pages/About/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/pages/About/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/pages/About/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/pages/About/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/pages/CreateGame/components/Create/Create.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/pages/CreateGame/components/Create/Create.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/pages/CreateGame/components/Create/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/pages/CreateGame/components/Create/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/routing/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/routing/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/services/Approval/Approval.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/services/Approval/Approval.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,7 +35,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="80639702c67dc9f4c90b639a29d7f20fd37670da" />
+        <entry key="$PROJECT_DIR$" value="main" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -74,6 +78,7 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\chant\IdeaProjects\coronattack\app" />
       <recent name="C:\Users\chant\IdeaProjects\coronattack\app\src\screens\Register\components" />
       <recent name="C:\Users\chant\IdeaProjects\coronattack\app\src" />
     </key>
@@ -161,7 +166,7 @@
       <workItem from="1631271968042" duration="6042000" />
       <workItem from="1631352201411" duration="2936000" />
       <workItem from="1631361934067" duration="6542000" />
-      <workItem from="1632761596804" duration="557000" />
+      <workItem from="1632761596804" duration="5699000" />
     </task>
     <task id="LOCAL-00001" summary="doc">
       <created>1628948666906</created>
@@ -240,7 +245,14 @@
       <option name="project" value="LOCAL" />
       <updated>1631369221509</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="package.json moved">
+      <created>1632762268791</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1632762268792</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -270,6 +282,7 @@
     <MESSAGE value="About folder added" />
     <MESSAGE value="refactoring packages" />
     <MESSAGE value="style adaption" />
-    <option name="LAST_COMMIT_MESSAGE" value="style adaption" />
+    <MESSAGE value="package.json moved" />
+    <option name="LAST_COMMIT_MESSAGE" value="package.json moved" />
   </component>
 </project>
