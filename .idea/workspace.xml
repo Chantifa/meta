@@ -4,16 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9837562d-e24c-476e-9354-d6bfa8f44208" name="Default Changelist" comment="package.json moved">
+    <list default="true" id="9837562d-e24c-476e-9354-d6bfa8f44208" name="Default Changelist" comment="about.js">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/components/UserDetails/UserDetails.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/components/UserDetails/UserDetails.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/pages/About/about.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/pages/About/about.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/pages/About/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/pages/About/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/pages/About/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/pages/About/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/pages/CreateGame/components/Create/Create.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/pages/CreateGame/components/Create/Create.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/pages/CreateGame/components/Create/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/pages/CreateGame/components/Create/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/routing/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/routing/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/services/Approval/Approval.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/services/Approval/Approval.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -166,7 +160,7 @@
       <workItem from="1631271968042" duration="6042000" />
       <workItem from="1631352201411" duration="2936000" />
       <workItem from="1631361934067" duration="6542000" />
-      <workItem from="1632761596804" duration="5699000" />
+      <workItem from="1632761596804" duration="7249000" />
     </task>
     <task id="LOCAL-00001" summary="doc">
       <created>1628948666906</created>
@@ -252,7 +246,14 @@
       <option name="project" value="LOCAL" />
       <updated>1632762268792</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="about.js">
+      <created>1632767368562</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1632767368562</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -283,6 +284,7 @@
     <MESSAGE value="refactoring packages" />
     <MESSAGE value="style adaption" />
     <MESSAGE value="package.json moved" />
-    <option name="LAST_COMMIT_MESSAGE" value="package.json moved" />
+    <MESSAGE value="about.js" />
+    <option name="LAST_COMMIT_MESSAGE" value="about.js" />
   </component>
 </project>

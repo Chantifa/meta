@@ -1,0 +1,45 @@
+Index: app/src/screens/Register/components/RightContent/RightContent.js
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>import React, { Component } from 'react';\r\nimport { withRouter} from \"react-router-dom\";\r\nimport { connect } from 'react-redux';\r\nimport { ActionCreators } from '../../../../actions/profile';\r\nimport './style.css';\r\nimport {isValidEmail} from \"../../../../utils\";\r\n\r\nexport class RightContent extends Component {\r\n  constructor(props) {\r\n    super(props);\r\n    this.state = {\r\n      user: {\r\n        firstName: '',\r\n        lastName: '',\r\n        email: '',\r\n      },\r\n      errors: {\r\n        user: {\r\n          firstName: 'Enter First Name',\r\n          email: 'Email is not valid!',\r\n        }\r\n      },\r\n      validForm: false,\r\n      submitted: false\r\n    }\r\n  }\r\n\r\n  componentDidMount() {\r\n    if(this.props.profile) {\r\n      this.setState({ user: this.props.profile });\r\n      if (this.props.profile.email) {\r\n        this.resetErrorMsg();\r\n      }\r\n    }\r\n  }\r\n\r\n  validationErrorMessage = (event) => {\r\n    const { name, value } = event.target;\r\n    let errors = this.state.errors;\r\n\r\n    switch (name) {\r\n      case 'firstName': \r\n        errors.user.firstName = value.length < 1 ? 'Enter First Name' : '';\r\n        break;\r\n      case 'email': \r\n        errors.user.email = isValidEmail(value) ? '' : 'Email is not valid!';\r\n        break;\r\n      default:\r\n        break;\r\n    }\r\n\r\n    this.setState({ errors });\r\n  }\r\n\r\n  inputChange = (event) => {\r\n    const { name, value } = event.target;\r\n    const user = this.state.user;\r\n    this.setState({ user });\r\n    this.validationErrorMessage(event);\r\n  }\r\n\r\n  checkboxChange = (event) => {\r\n    const { name, checked } = event.target;\r\n    const user = this.state.user;\r\n    user[name] = checked;\r\n    this.setState({ user });\r\n  }\r\n\r\n  validateForm = (errors) => {\r\n    let valid = true;\r\n    Object.entries(errors.user).forEach(item => {\r\n      console.log(item)\r\n      item && item[1].length > 0 && (valid = false)\r\n    })\r\n    return valid;\r\n  }\r\n\r\n  submitForm = async (event) => {\r\n    this.setState({ submitted: true });\r\n    this.props.dispatch(ActionCreators.formSubmittionStatus(true));\r\n    const user = this.state.user;\r\n    if (user && this.props.profile) {\r\n      user.profileImage = this.props.profile.profileImage;\r\n    }\r\n    event.preventDefault();\r\n    if (this.validateForm(this.state.errors) && this.props.profile && this.props.profile.profileImage) {\r\n      console.info('Valid Form')\r\n      this.props.dispatch(ActionCreators.addProfile(user));\r\n      this.props.history.push('/confirm')\r\n    } else {\r\n      console.log('Invalid Form')\r\n    }\r\n  }\r\n\r\n  resetErrorMsg = () => {\r\n    let errors = this.state.errors;\r\n    errors.user.firstName = ''\r\n    errors.user.email = ''\r\n    this.setState({ errors });\r\n  }\r\n\r\n  render() {\r\n    const { firstName, lastName, email} = this.state.user;\r\n    const { submitted } = this.state;\r\n    return (\r\n      <div className=\"rightPanel\">\r\n        <div className=\"row\">\r\n          <label className=\"col-sm-2 col-form-label\">Name</label>\r\n          <div className=\"col-sm-3 mb-2\">\r\n            <input type=\"text\" value={firstName} name=\"firstName\" onChange={(e) => { this.inputChange(e)} } className=\"form-control\" placeholder=\"First Name\" />\r\n            { submitted && this.state.errors.user.firstName.length > 0 &&  <span className='error'>{this.state.errors.user.firstName}</span>}\r\n          </div>\r\n          <div className=\"col-sm-3 mb-2\">\r\n            <input type=\"text\" value={lastName} name=\"lastName\" onChange={(e) => { this.inputChange(e)} } className=\"form-control\" placeholder=\"Last Name\" />\r\n          </div>\r\n          <div className=\"col-sm-4\">\r\n          </div>\r\n        </div>\r\n        <div className=\"row\">\r\n          <label htmlFor=\"email\" className=\"col-sm-2 col-form-label\">Email</label>\r\n          <div className=\"col-sm-6 mb-2\">\r\n            <input type=\"email\" value={email} name=\"email\" onChange={(e) => { this.inputChange(e)} } className=\"form-control\" id=\"email\" placeholder=\"coronattack@gmail.com\" />\r\n            { submitted && this.state.errors.user.email.length > 0 &&  <span className='error'>{this.state.errors.user.email}</span>}\r\n          </div>\r\n          <div className=\"col-sm-4\">\r\n          </div>\r\n        </div>\r\n        <div className=\"row\">\r\n          <div className=\"col-sm-5 mb-2\">\r\n          </div>\r\n          <div className=\"col-sm-4\">\r\n            <button type=\"button\" className=\"button\" onClick={this.submitForm}>Submit</button>\r\n          </div>\r\n          <div className=\"col-sm-3\"></div>\r\n        </div>\r\n      </div>\r\n    )\r\n  }\r\n}\r\n\r\nconst mapStateToProps = (state) => {\r\n  return {\r\n    profile: state.user.profile\r\n  }\r\n}\r\n\r\nexport default connect(mapStateToProps)(withRouter(RightContent));\r\n
+===================================================================
+diff --git a/app/src/screens/Register/components/RightContent/RightContent.js b/app/src/screens/Register/components/RightContent/RightContent.js
+--- a/app/src/screens/Register/components/RightContent/RightContent.js	
++++ b/app/src/screens/Register/components/RightContent/RightContent.js	
+@@ -16,7 +16,8 @@
+       },
+       errors: {
+         user: {
+-          firstName: 'Enter First Name',
++          firstName: 'Enter your First Name',
++          lastName:'Enter your Last Name',
+           email: 'Email is not valid!',
+         }
+       },
+@@ -40,6 +41,9 @@
+ 
+     switch (name) {
+       case 'firstName': 
++        errors.user.firstName = value.length < 1 ? 'Enter First Name' : '';
++        break;
++      case 'lastName':
+         errors.user.firstName = value.length < 1 ? 'Enter First Name' : '';
+         break;
+       case 'email': 
+Index: app/src/screens/Confirmation/Confirmation.js
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>import React, { Component } from 'react';\r\nimport { connect } from 'react-redux';\r\nimport Approval from './components/Approval';\r\nimport { Divider, ProfileImage } from '../../components';\r\n\r\nexport class Confirmation extends Component {\r\n  render() {\r\n    return (\r\n      <div className=\"row\">\r\n        <ProfileImage />\r\n        <Approval user={this.props.profile} />\r\n      </div>\r\n    )\r\n  }\r\n}\r\n\r\nconst mapStateToProps = (state) => {\r\n  return {\r\n    profile: state.user.profile\r\n  }\r\n}\r\n\r\nexport default connect(mapStateToProps)(Confirmation);\r\n
+===================================================================
+diff --git a/app/src/screens/Confirmation/Confirmation.js b/app/src/screens/Confirmation/Confirmation.js
+--- a/app/src/screens/Confirmation/Confirmation.js	
++++ b/app/src/screens/Confirmation/Confirmation.js	
+@@ -1,7 +1,7 @@
+ import React, { Component } from 'react';
+ import { connect } from 'react-redux';
+ import Approval from './components/Approval';
+-import { Divider, ProfileImage } from '../../components';
++import {ProfileImage } from '../../components';
+ 
+ export class Confirmation extends Component {
+   render() {

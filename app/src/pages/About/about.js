@@ -5,13 +5,15 @@ import './style.css';
 export class About extends Component {
     render() {
         return (
-            <div className="pagecenter about">
-                <p>Hi, we are Theo and Chantale</p>
+            <div className="container about">
+                <div className="col align-self-start"/>
+                <div className="col align-self-center">
+                <b> Hi, we are Theo and Chantale</b>
                 <p>Wir sind 2 Informatik Studenten der FFHS und haben das Spiel im Rahmen des Modules WebE (Web Entwicklung) programmiert
                 dazu mussten folgende Ziele in 4 Meilensteine Erreicht werden:</p>
                 <div>
                     1. Entwicklung eins Spiels mittels Web-Technologien vom folgenden Typ
-                    <li>a. Runden-basiert, oder</li>
+                    <lo>a. Runden-basiert, oder</lo>
                     <li>b. Educational oder</li>
                     <li>c. Datensammler</li>
                 </div>
@@ -33,11 +35,12 @@ export class About extends Component {
                     <li>b. Er gleicht den lokalen Status eines Spiels mit dem Status des Servers ab (Synchronisation)</li>
                     <li>c. Er erlaubt den Spielern eines Spiels zu chatten.</li>
                 </div>
-                <li>    6. Folgende Aspekte sollen beachtet werden: Internationalisierung, Usability,
-                    Accessability, Levels (das Spiel muss mind. 3 Levels haben), Responsiveness</li>
-                <li>    7. Am Ende des Projekts muss eine komplette Distribution des Spiels abgegeben werden
-                    (lauffähiges Spiel inklusive Quellcode, Installationsanleitung, Handbuch)</li>
+                <lo>6. Folgende Aspekte sollen beachtet werden: Internationalisierung, Usability,
+                    Accessability, Levels (das Spiel muss mind. 3 Levels haben), Responsiveness</lo>
+                    <div>7. Am Ende des Projekts muss eine komplette Distribution des Spiels abgegeben werden
+                        (lauffähiges Spiel inklusive Quellcode, Installationsanleitung, Handbuch)</div>
             </div>
+                </div>
         )
     }
 
