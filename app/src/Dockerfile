@@ -1,10 +1,15 @@
 FROM node:alpine
-ENV NODE_ENV=production
 
-COPY ["package.json", "package-lock.json*", "./"]
+WORKDIR /src/
 
+ENV PATH /node_modules/.bin:$PATH
+
+COPY package.json .
+COPY package-lock.json .
 RUN npm install
 
 COPY . .
 
-CMD [ "node", "server.js" ]
+CMD ["npm", "run", "start"]
+
+EXPOSE 3000
