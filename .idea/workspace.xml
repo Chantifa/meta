@@ -4,17 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9837562d-e24c-476e-9354-d6bfa8f44208" name="Default Changelist" comment="including password">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/app/docker-compose.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/Dockerfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/package-lock.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/package.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/server.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/serviceWorker.js" beforeDir="false" />
+    <list default="true" id="9837562d-e24c-476e-9354-d6bfa8f44208" name="Default Changelist" comment="Docker cleaned">
+      <change beforePath="$PROJECT_DIR$/app/src/server.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/server.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -247,7 +238,14 @@
       <option name="project" value="LOCAL" />
       <updated>1631369221509</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Docker cleaned">
+      <created>1632860540916</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1632860540916</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -277,6 +275,7 @@
     <MESSAGE value="About folder added" />
     <MESSAGE value="refactoring packages" />
     <MESSAGE value="style adaption" />
-    <option name="LAST_COMMIT_MESSAGE" value="style adaption" />
+    <MESSAGE value="Docker cleaned" />
+    <option name="LAST_COMMIT_MESSAGE" value="Docker cleaned" />
   </component>
 </project>
