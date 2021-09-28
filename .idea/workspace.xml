@@ -4,24 +4,23 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9837562d-e24c-476e-9354-d6bfa8f44208" name="Default Changelist" comment="about.js updated mit Text">
-      <change afterPath="$PROJECT_DIR$/img/corona.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/vaccination.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+    <list default="true" id="4c5d1cdd-dabd-4de7-9658-43551f2a2c1c" name="Default Changelist" comment="docker-compose.yml&#10;Dockerfile">
+      <change afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_15_09_2021_20_49__Default_Changelist_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_15_09_2021_20_49__Default_Changelist_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_11_09_2021_14_11__Default_Changelist_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_11_09_2021_14_11__Default_Changelist_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_26_09_2021_11_28__Default_Changelist_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_26_09_2021_11_28__Default_Changelist_.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/components/Navbar/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/components/Navbar/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/components/UserDetails/UserDetails.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/components/UserDetails/UserDetails.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/pages/About/about.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/pages/About/about.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/pages/About/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/pages/About/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/pages/Login/Login.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/pages/Login/Login.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/pages/Login/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/pages/Login/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/utils/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/utils/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/app/docker-compose.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/Dockerfile" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CodeInsightWorkspaceSettings">
+    <option name="optimizeImportsOnTheFly" value="true" />
   </component>
   <component name="CodeStyleSettingsInfer">
     <option name="done" value="true" />
@@ -51,6 +50,7 @@
   </component>
   <component name="ProjectId" id="1wiju1miRDuWTChOn1tikfL44oh" />
   <component name="ProjectLevelVcsManager">
+    <OptionsSetting value="false" id="Update" />
     <ConfirmationsSetting value="2" id="Add" />
   </component>
   <component name="ProjectViewState">
@@ -59,6 +59,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="DatabaseDriversLRU" value="postgresql" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
@@ -94,6 +95,17 @@
     </key>
   </component>
   <component name="RunManager" selected="Docker.app: Compose Deployment">
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="app: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
       <deployment type="docker-compose.yml">
         <settings>
@@ -138,10 +150,10 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Docker.src/Dockerfile" />
         <item itemvalue="Docker.app: Compose Deployment" />
         <item itemvalue="Docker.app.react-app: Compose Deployment" />
         <item itemvalue="Docker.app.storage: Compose Deployment" />
-        <item itemvalue="Docker.src/Dockerfile" />
       </list>
     </recent_temporary>
   </component>
@@ -303,5 +315,32 @@
     <MESSAGE value="about.js" />
     <MESSAGE value="about.js updated mit Text" />
     <option name="LAST_COMMIT_MESSAGE" value="about.js updated mit Text" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="725" y="224" key="#Docker" timestamp="1632808586727">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="725" y="224" key="#Docker/0.0.1920.1040@0.0.1920.1040" timestamp="1632808586727" />
+    <state x="797" y="219" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1632819013639">
+      <screen x="0" y="0" width="1920" height="1160" />
+    </state>
+    <state x="797" y="196" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1632809155691" />
+    <state x="797" y="219" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1160/1920.0.1920.1160@0.0.1920.1160" timestamp="1632819013639" />
+    <state width="1247" height="275" key="GridCell.Tab.0.bottom" timestamp="1632808268517">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1247" height="275" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1632808268517" />
+    <state width="1247" height="275" key="GridCell.Tab.0.center" timestamp="1632808268517">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1247" height="275" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1632808268517" />
+    <state width="1247" height="275" key="GridCell.Tab.0.left" timestamp="1632808268517">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1247" height="275" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1632808268517" />
+    <state width="1247" height="275" key="GridCell.Tab.0.right" timestamp="1632808268517">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1247" height="275" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1632808268517" />
   </component>
 </project>

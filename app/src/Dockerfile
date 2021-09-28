@@ -1,6 +1,6 @@
 FROM node:alpine
 
-WORKDIR /src/
+WORKDIR /src
 
 ENV PATH /node_modules/.bin:$PATH
 
