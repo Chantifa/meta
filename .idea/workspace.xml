@@ -5,11 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9837562d-e24c-476e-9354-d6bfa8f44208" name="Default Changelist" comment="including password">
-      <change afterPath="$PROJECT_DIR$/app/package-lock.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/app/docker-compose.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/Dockerfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/package-lock.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/server.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/serviceWorker.js" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,6 +40,7 @@
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="UPDATE_TYPE" value="REBASE" />
   </component>
   <component name="ProblemsViewState">
     <option name="selectedIndex" value="1" />
@@ -85,7 +91,7 @@
       <recent name="C:\Users\chant\IdeaProjects\coronattack\app\" />
     </key>
   </component>
-  <component name="RunManager" selected="Docker.app: Compose Deployment">
+  <component name="RunManager" selected="Docker.src/Dockerfile">
     <configuration name="app: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
       <deployment type="docker-compose.yml">
         <settings>
@@ -130,10 +136,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Docker.app: Compose Deployment" />
-        <item itemvalue="Docker.app.react-app: Compose Deployment" />
-        <item itemvalue="Docker.app.storage: Compose Deployment" />
         <item itemvalue="Docker.src/Dockerfile" />
+        <item itemvalue="Docker.app.react-app: Compose Deployment" />
+        <item itemvalue="Docker.app: Compose Deployment" />
+        <item itemvalue="Docker.app.storage: Compose Deployment" />
+        <item itemvalue="Docker.app: Compose Deployment" />
       </list>
     </recent_temporary>
   </component>
