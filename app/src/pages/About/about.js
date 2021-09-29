@@ -29,10 +29,10 @@ export class About extends Component {
                 <div className="row">
                     <div className="col-sm-3"/>
                     <div className="col-sm-8 mb-2">
-                        1. development of a game using folowing type of web technologies:
-                        <li>Runden-basiert, oder</li>
-                        <li>Educational oder</li>
-                        <li>Datensammler</li>
+                        1. development of a game using following type of web technologies:
+                        <li>round_based, or</li>
+                        <li>educational or</li>
+                        <li>data collector</li>
                     </div>
                     <div className="col-sm-9">
                     </div>
@@ -40,9 +40,8 @@ export class About extends Component {
                 <div className="row">
                     <div className="col-sm-3"/>
                     <div className="col-sm-8 mb-2">
-                        <p>2. Das Spiel muss eine Client/Server Architektur haben</p>
-                        <p>3. Der Server und die Clients kommunizieren über ein Text-basiertes Protokoll. Das
-                            Protokoll muss lesbar sein.</p>
+                        <p>2. The game mus have a client server architecture</p>
+                        <p>3. The server and the client need to communicate over a text based protocol and the protocol needs to be readable</p>
                     </div>
                     <div className="col-sm98">
                     </div>
@@ -50,9 +49,9 @@ export class About extends Component {
                 <div className="row">
                     <div className="col-sm-3"/>
                     <div className="col-sm-8 mb-2">
-                        <p>2. Das Spiel muss eine Client/Server Architektur haben</p>
-                        <p>3. Der Server und die Clients kommunizieren über ein Text-basiertes Protokoll. Das
-                            Protokoll muss lesbar sein.</p>
+                        4. The server functionality must be defined within following criteria.
+                        <li>the server checks the status during game and at the end there is a scoring scale</li>
+                        <li>If all players leave the game, the server quits the game.</li>
                     </div>
                     <div className="col-sm-9">
                     </div>
@@ -60,10 +59,10 @@ export class About extends Component {
                 <div className="row">
                     <div className="col-sm-3"/>
                     <div className="col-sm-8 mb-2">
-                        4. Die Server-Funktionalität ist wie folgt definiert:
-                        <li>Er verwaltet den Spielverlauf (überprüft und stellt sicher, dass alle Spielzüge
-                            regelkonform sind, erkennt das Ende des Spiels, zählt Punkte, etc.)</li>
-                        <li>Wenn alles Spieler das Spiel verlassen, dann beendet der Server das Spiel.</li>
+                        <p>5. A client has following features:</p>
+                        <li>It takes the user input over a graphical userinterface, GUI</li>
+                        <li>it compares the local status of the game with the status of the server (sync)</li>
+                        <li>it allows gamers to chat with each other.</li>
                     </div>
                     <div className="col-sm-9">
                     </div>
@@ -71,11 +70,7 @@ export class About extends Component {
                 <div className="row">
                     <div className="col-sm-3"/>
                     <div className="col-sm-8 mb-2">
-                        <p>5. Ein Client hat folgende Eigenschaften:</p>
-                        <li>Er nimmt Benutzereingaben durch eine grafische Schnittstelle (graphical
-                            userinterface, GUI) entgegen</li>
-                        <li>Er gleicht den lokalen Status eines Spiels mit dem Status des Servers ab (Synchronisation)</li>
-                        <li>Er erlaubt den Spielern eines Spiels zu chatten.</li>
+                        <p>6. Following aspects need to be respected: internationalizing, usability, accessibility, levels (game need to have minimum 3 levels), responsiveness</p>
                     </div>
                     <div className="col-sm-9">
                     </div>
@@ -83,17 +78,7 @@ export class About extends Component {
                 <div className="row">
                     <div className="col-sm-3"/>
                     <div className="col-sm-8 mb-2">
-                        <p>6. Folgende Aspekte sollen beachtet werden: Internationalisierung, Usability,
-                            Accessability, Levels (das Spiel muss mind. 3 Levels haben), Responsiveness</p>
-                    </div>
-                    <div className="col-sm-9">
-                    </div>
-                </div>
-                <div className="row">
-                    <div className="col-sm-3"/>
-                    <div className="col-sm-8 mb-2">
-                        <p>7. Am Ende des Projekts muss eine komplette Distribution des Spiels abgegeben werden
-                            (lauffähiges Spiel inklusive Quellcode, Installationsanleitung, Handbuch)</p>
+                        <p>7. At the end of the project, there has to to be a complete distributiv game. (running game inclusive source code, installation manuel, manuel)</p>
                     </div>
                     <div className="col-sm-9">
                     </div>
@@ -101,7 +86,6 @@ export class About extends Component {
             </div>
         )
     }
-
 }
 
 export default About;
