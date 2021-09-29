@@ -3,7 +3,7 @@ version: "3"
 services:
   react-app:
     container_name: react-app
-    build:  ./src
+    build:  ./
     volumes:
       - ./src:/src
     ports:
