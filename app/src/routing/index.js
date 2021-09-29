@@ -4,6 +4,7 @@ import Login from '../pages/Login';
 import Home from '../pages/Home/Home.js';
 import Register from '../pages/Register';
 import Confirmation from '../services/Confirmation.js';
+import About from '../pages/About/about.js';
 //import CreateGame from '../pages/CreateGame';
 //import JoinGame from '../pages/CreateGame/components/Join';
 import { AuthContext } from '../services/context/auth';
@@ -13,7 +14,7 @@ function AuthenticatedRoute ({component: Component, ...rest}) {
   return (
     <Route
       {...rest}
-      render={(props) => getStore('user') ? <Component {...props} />
+      render={(props) => getStore('email') ? <Component {...props} />
         : <Redirect to={{pathname: '/login', state: {from: props.location}}} />}
     />
   )
@@ -28,6 +29,7 @@ class Navigation extends Component {
             <Route exact path="/login" component={Login} />
             <Route path="/register" component={Register} />
             <Route path="/confirm" component={Confirmation} />
+            <Route path="/about" component={About} />
             <AuthenticatedRoute exact path='/home' component={Home} />
             <Route path='*' component={Login} />
           </Switch>
