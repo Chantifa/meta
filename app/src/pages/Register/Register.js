@@ -12,13 +12,14 @@ export class Register extends Component {
     super(props);
     this.state = {
       user: {
-        firstName: '',
-        lastName: '',
+        name: '',
         email: '',
+        password: '',
+        retypePassword: ''
       },
       errors: {
         user: {
-          firstName: 'Enter First Name',
+          name: 'Enter Your Name',
           email: 'Email is not valid!',
         }
       },
@@ -41,8 +42,8 @@ export class Register extends Component {
     let errors = this.state.errors;
 
     switch (name) {
-      case 'firstName':
-        errors.user.firstName = value.length < 1 ? 'Enter First Name' : '';
+      case 'name':
+        errors.user.name = value.length < 1 ? 'Enter Your Name' : '';
         break;
       case 'email':
         errors.user.email = isValidEmail(value) ? '' : 'Email is not valid!';
@@ -97,7 +98,7 @@ export class Register extends Component {
 
   resetErrorMsg = () => {
     let errors = this.state.errors;
-    errors.user.firstName = ''
+    errors.user.name = ''
     errors.user.email = ''
     this.setState({ errors });
   }
@@ -105,7 +106,6 @@ export class Register extends Component {
 
   render() {
 
-    const { firstName, lastName, email } = this.state.user;
     const { submitted } = this.state;
 
     return (
@@ -116,22 +116,35 @@ export class Register extends Component {
 
           <div className="row">
             <label className="col-sm-3 col-form-label">Name:</label>
-            <div className="col-sm-3 mb-5">
-              <input type="text" value={firstName} name="firstName" onChange={(e) => { this.inputChange(e) }} className="form-control" placeholder="First Name" />
-              {submitted && this.state.errors.user.firstName.length > 0 && <span className='error'>{this.state.errors.user.firstName}</span>}
-            </div>
-            <div className="col-sm-3 mb-2">
-              <input type="text" value={lastName} name="lastName" onChange={(e) => { this.inputChange(e) }} className="form-control" placeholder="Last Name" />
-            </div>
-            <div className="col-sm-4">
+            <div className="col-sm-6 mb-5">
+              <input type="text" value={this.state.name} name="name" onChange={(e) => { this.inputChange(e) }} className="form-control" placeholder="Your Name" />
+              {submitted && this.state.errors.user.name.length > 0 && <span className='error'>{this.state.errors.user.name}</span>}
             </div>
           </div>
 
           <div className="row">
             <label htmlFor="email" className="col-sm-3 col-form-label">Email:</label>
             <div className="col-sm-6 mb-5">
-              <input type="email" value={email} name="email" onChange={(e) => { this.inputChange(e) }} className="form-control" id="email" placeholder="coronattack@gmail.com" />
+              <input type="email" value={this.state.email} name="email" onChange={(e) => { this.inputChange(e) }} className="form-control" id="email" placeholder="coronattack@gmail.com" />
               {submitted && this.state.errors.user.email.length > 0 && <span className='error'>{this.state.errors.user.email}</span>}
+            </div>
+            <div className="col-sm-4">
+            </div>
+          </div>
+
+          <div className="row">
+            <label htmlFor="password" className="col-sm-3 col-form-label">Password:</label>
+            <div className="col-sm-6 mb-5">
+              <input type="password" value={this.state.password} name="email" onChange={(e) => { this.inputChange(e) }} className="form-control" id="password" placeholder="Your password" />
+            </div>
+            <div className="col-sm-4">
+            </div>
+          </div>
+
+          <div className="row">
+            <label htmlFor="retypePassword" className="col-sm-3 col-form-label">Retype Password:</label>
+            <div className="col-sm-6 mb-5">
+              <input type="password" value={this.state.retypePassword} name="retypePassword" onChange={(e) => { this.inputChange(e) }} className="form-control" id="retypePassword" placeholder="Retype your password" />
             </div>
             <div className="col-sm-4">
             </div>
