@@ -1,6 +1,16 @@
 version: "3"
 
 services:
+  react-app:
+    container_name: react-app
+    build:  ./
+    volumes:
+      - ./src:/src
+    ports:
+      - 3000:3000
+    stdin_open: true
+    restart: always
+    working_dir: /src
 
   storage:
     container_name: storage
@@ -17,3 +27,5 @@ services:
 
 volumes:
   postgres-volume:
+
+

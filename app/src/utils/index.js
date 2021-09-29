@@ -9,6 +9,14 @@ export const setStore = (name, content) => {
   return window.localStorage.setItem(name, content)
 }
 
+export const setScore = (value, content) => {
+  if(!value) return null
+  if(typeof  content !== 'string'){
+    content = JSON.stringify(content)
+  }
+  return window.localStorage.setItem(value, content)
+}
+
 /**
   * Get localStorage
 */
@@ -26,7 +34,7 @@ export const removeItem = (name) => {
 }
 
 /**
- * Validate Email address
+ * Validate name address
  */
 export const isValidEmail = (value) => {
   return !(value && !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,64}$/i.test(value))
@@ -39,4 +47,6 @@ export const isValidPassword = (value) => {
   if(value.length > 4)
   return value.length
 }
+
+
 

@@ -7,8 +7,8 @@ import './style.css';
 
 export class Approval extends Component {
   agree = () => {
-    if (this.props.user.firstName) {
-      setStore('user', this.props.user);
+    if (this.props.user.email) {
+      setStore('email', this.props.user);
       alert('Congratulation your profile Completed successfully!');
       this.props.history.push('/home');
     } else {
