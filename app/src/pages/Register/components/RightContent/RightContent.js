@@ -46,24 +46,24 @@ export class RightContent extends Component {
     let errors = this.state.errors;
 
     switch (name) {
-      case 'firstName': 
+      case 'firstName':
         errors.user.firstName = value.length < 1 ? 'Enter First Name' : '';
         break;
-      case 'email': 
+      case 'email':
         errors.user.email = isValidEmail(value) ? '' : 'Email is not valid!';
         break;
       case 'password':
-        errors.user.password = isValidPassword(value)?'':'Password is not valid!'
+        errors.user.password = isValidPassword(value)?'':'Password is not valid!';
+      break;
       default:
         break;
     }
-
     this.setState({ errors });
   }
 
   inputChange = (event) => {
     // eslint-disable-next-line
-    const { name, value } = event.target;
+    const { email, value } = event.target;
     const user = this.state.user;
     this.setState({ user });
     this.validationErrorMessage(event);
@@ -162,11 +162,11 @@ export class RightContent extends Component {
           </div>
           <div className="buttonsContainer">
             <Link to="/">
-            <button type="button" className="button" style={{backgroundColor:'#D66767'}}>Back</button>
+            <button type="button" className="button" style={{backgroundColor:'#d66767'}}>Back</button>
             </Link>
             <button type="button" className="button" onClick={this.submitForm}>Submit</button>
           </div>
-          <div className="col-sm-3"></div>
+          <div className="col-sm-3"/>
         </div>
       </div>
     )
