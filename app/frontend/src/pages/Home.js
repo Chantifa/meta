@@ -2,7 +2,7 @@ import { React, useState, useEffect } from "react";
 
 function Home() {
 
-    const [data, setData] = useState(null);
+    const [data, setData] = useState([]);
     useEffect(() => {
         fetch("/api")
             .then((res) => res.json())
@@ -13,7 +13,8 @@ function Home() {
         <div>
             <h1>Coronattack Home</h1>
             <a href="/users/login">Login</a>
-            <p>{!data ? "Loading..." : data}</p>
+            <br />
+            {data}
         </div>
     )
 }
