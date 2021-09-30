@@ -10,8 +10,8 @@ export class About extends Component {
                     <div className="col-sm-1"/>
                     <div className="col-sm-9 mb-2">
                         <h1>Coronattack</h1>
-                        <img className="float-start" src={require("../../img/corona.png").default} alt="corona"/>
-                        <img className="float-end" src={require("../../img/vaccination.png").default} alt="vaccination"/>
+                        <img className="float-start" src={require("../../img/corona.png")} alt="corona"/>
+                        <img className="float-end" src={require("../../img/vaccination.png")} alt="vaccination"/>
                     </div>
                     <div className="col-sm-8">
                     </div>
@@ -71,8 +71,6 @@ export class About extends Component {
                     <div className="col-sm-3"/>
                     <div className="col-sm-8 mb-2">
                         <p>6. Following aspects need to be respected: internationalizing, usability, accessibility, levels (game need to have minimum 3 levels), responsiveness</p>
-                    </div>
-                    <div className="col-sm-9">
                     </div>
                 </div>
                 <div className="row">
