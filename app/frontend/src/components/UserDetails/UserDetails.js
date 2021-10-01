@@ -4,11 +4,11 @@ import './style.css';
 
 export class UserDetails extends Component {
   render() {
-    const { firstName, lastName, email,password, score } = this.props.user
+    const { username, email,password, score } = this.props.user
     return (
       <div>
         <div>
-          I am <span className="bindtext">{firstName} {lastName}</span>
+          I am <span className="bindtext">{username}</span>
         </div>
         <div>
           My email: <span className="bindtext">{email}</span>

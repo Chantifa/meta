@@ -13,6 +13,8 @@ class App extends React.Component {
       this.props.dispatch(ActionCreators.login(user));
     }
   }
+
+
   render() {
     return (
       <div>
