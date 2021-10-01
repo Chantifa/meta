@@ -1,7 +1,14 @@
-import ChatMessage from "./ChatMessage";
+import ChatMessage from "/ChatMessage";
+import React, { Component } from 'react';
 
-export default function Chat(props) {
-    return <ol>
-        {props.messages.map((data, key) => <ChatMessage key={key} data={data}/>)}
+export class Chat extends Component {
+    render() {
+        return (
+     <ol>
+        {this.props.messages.map((data, key) => <ChatMessage key={key} data={data}/>)}
     </ol>
+        )
 }
+}
+
+export default Chat;

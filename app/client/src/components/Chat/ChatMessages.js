@@ -1,4 +1,7 @@
-export default function ChatMessages(props) {
-    return <li> {JSON.stringify(props.data)}</li>
+export class ChatMessage {
+    render() {
+        return (
+             <li> {JSON.stringify(this.props.data)}</li>
+        )}
 }
-export default Chat;
+export default ChatMessage;

@@ -6,7 +6,7 @@ export class Welcome extends Component {
     render() {
         return (
             <div className="marquee">
-                <p>Welcome {this.props.user.firstName} {this.props.user.lastName} !</p>
+                <p>Welcome {this.props.user.username} !</p>
             </div>
         )
     }
