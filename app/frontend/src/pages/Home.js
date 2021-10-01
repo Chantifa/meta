@@ -1,4 +1,7 @@
 import { React, useState, useEffect } from "react";
+import {
+    Link
+} from "react-router-dom";
 
 function Home() {
 
@@ -12,7 +15,7 @@ function Home() {
     return (
         <div>
             <h1>Coronattack Home</h1>
-            <a href="/users/login">Login</a>
+                <Link to="/login">Login</Link>
             <br />
             {data}
         </div>
