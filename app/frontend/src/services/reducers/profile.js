@@ -2,8 +2,7 @@ import { Types } from '../constants/actionTypes';
 
 const initialState = {
   profile: {
-    firstName: '',
-    lastName: '',
+    username: '',
     email: '',
     password: ''
   },
@@ -30,14 +29,6 @@ const reducer = (state = initialState, action) => {
         ...state,
         profile: action.payload.user,
         formSubmitted: false // after update user formsubmition reset
-      }
-    case Types.UPDATE_PROFILE_PICTURE:
-      return {
-        ...state,
-        profile: {
-          ...state.profile,
-          profileImage: action.payload.image
-        }
       }
     case Types.FORM_SUBMITION_STATUS:
       return {
