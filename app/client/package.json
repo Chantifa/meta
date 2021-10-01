@@ -17,6 +17,12 @@
     "redux": "^4.1.1",
     "redux-thunk": "^2.3.0"
   },
+  "env": {
+    "webextensions": true
+  },
+  "globals": {
+    "chrome": true
+  },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",

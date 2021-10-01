@@ -1,6 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import {Footer } from './components';
+import {Navbar, Footer } from './components';
 import Navigation from './routing';
 import { getStore } from './utils';
 import { ActionCreators } from './services/actions/profile';
