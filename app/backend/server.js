@@ -23,19 +23,7 @@ app.post('/users/register', async (req, res) => {
 
     let { nickname, email, password, password2 } = req.body;
     console.log(nickname,email, password, password2);
-})
 
-/* app.post("/users/register", async (req, res) => {
-    let { name, email, password, password2 } = req.body;
-
-    console.log({
-        name, email, password, password2
-    });
-}); */
-
-
-
-    /*
     let errors = [];
 
     hashedPassword = await bcrypt.hash(password, 10); // 10 is the number of rounds for the hash
@@ -65,14 +53,14 @@ app.post('/users/register', async (req, res) => {
                     `INSERT INTO users (name, email, password)
                     VALUES ($1, $2, $3)
                     RETURNING id, name, email,  password`,
-                    [name, email, hashedPassword], // these are the values $1 $2 $3, we give them names
+                    [nickname, email, hashedPassword], // these are the values $1 $2 $3, we give them names
                     (err, results) => {
                         if (err) {
                             throw err;
                         }
                         console.log(results.rows);
                         //req.flash("success_msg", "You are now registered. Please log in");
-                        res.redirect("/login"); // redirects to the login page
+                        //res.redirect("/login"); // redirects to the login page
                     }
                 );
             }
@@ -80,7 +68,21 @@ app.post('/users/register', async (req, res) => {
     );
 
 
+});
+
+
+/* app.post("/users/register", async (req, res) => {
+    let { name, email, password, password2 } = req.body;
+
+    console.log({
+        name, email, password, password2
+    });
 }); */
+
+
+
+    /*
+     */
 
 // listen port
 
