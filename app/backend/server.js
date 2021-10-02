@@ -7,7 +7,6 @@ var bodyParser = require('body-parser');
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
-
 const PORT = process.env.PORT || 3001;
 
 // test backend
@@ -22,8 +21,8 @@ app.get("/api", (req, res) => {
 
 app.post('/users/register', async (req, res) => {
 
-    let { name, email, password, password2 } = req.body;
-    console.log(name,email, password, password2);
+    let { nickname, email, password, password2 } = req.body;
+    console.log(nickname,email, password, password2);
 })
 
 /* app.post("/users/register", async (req, res) => {
