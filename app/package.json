@@ -1,38 +1,31 @@
 {
   "name": "coronattack",
   "version": "0.1.0",
-  "private": true,
+  "main": "server.js",
+  "type": "module",
   "dependencies": {
-    "@testing-library/jest-dom": "^5.14.1",
-    "@testing-library/react": "^11.2.7",
-    "@testing-library/user-event": "^12.8.3",
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2",
-    "react-scripts": "4.0.3",
-    "web-vitals": "^1.1.2"
+    "express": "^4.17.1",
+    "fs": "^0.0.1-security",
+    "socket.io": "^4.2.0"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "start": "nodemon server.js",
+    "start-client": "npm --prefix ./client start",
+    "start-all": "npm start & npm run start-client && fg",
+    "test": "echo 'no tests for server yet' && exit 0"  },
+  "repository": {
+    "type": "git",
+    "url": "https://git.ffhs.ch/chantale.gihara/coronattack.git"
   },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^2.0.12"
   },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
+  "nodemonConfig": {
+    "ignore": [
+      "client/src/*.js"
     ]
   }
 }
