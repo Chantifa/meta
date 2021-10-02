@@ -1,13 +1,11 @@
 import React from 'react';
-import {
-    Link
-} from "react-router-dom";
+import { Link } from "react-router-dom";
 
 function Login() {
     return (
         <div>
             <h1>Coronattack Login</h1>
-            <form action="/users/login" method="POST">
+            <form action="/login" method="POST">
                 <div>
                     <input
                         type="email"

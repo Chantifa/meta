@@ -1,4 +1,5 @@
-import React from 'react'
+import React from 'react';
+import { Link } from "react-router-dom";
 
 function Dashboard() {
     return (
@@ -6,7 +7,7 @@ function Dashboard() {
             <h1>Dashboard</h1>
             <h1>Game here</h1>
             <h1>Chat here</h1>
-            <a href="/users/logout">Logout</a>
+            <Link to="/">Logout</Link>
         </div>
     )
 }
