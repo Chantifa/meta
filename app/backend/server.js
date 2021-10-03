@@ -22,12 +22,11 @@ app.get("/api", (req, res) => {
 app.post('/users/register', async (req, res) => {
 
     let { nickname, email, password, password2 } = req.body;
-    console.log(nickname,email, password, password2);
-
-    let errors = [];
+    
+    console.log(" ########### I reveived that from server: ", nickname, email, password, password2);
 
     hashedPassword = await bcrypt.hash(password, 10); // 10 is the number of rounds for the hash
-    console.log(`this is the hashed pw ${hashedPassword}`);
+    console.log(`########### this is the hashed pw: ${hashedPassword} ########### `);
     // Validation passed
     // check if the email already exists in our db
     pool.query(
@@ -38,12 +37,16 @@ app.post('/users/register', async (req, res) => {
             if (err) {
                 console.log(err);
             }
-            console.log(` !!!!!!!! if this is greater than 1 then the account already exists:  ${results.rows.length}`);
+            console.log(` ########### if this is greater than 1 then the account already exists:  ${results.rows.length}`);
 
             if (results.rows.length > 0) {
-                // find a way to show a validation at the page ----------------------> done
-                errors.push({ message: "Email already registered" });
-                res.render("register", { errors }); // this will render the register page again showing the errors (props)
+                // find a way to show a validation at the page ----------------------
+
+                //res.json({ accountExists: true });
+
+                res.send({ emailExists: true })
+
+                console.log("########## account already exists ##########  ")
 
             } else {
 
