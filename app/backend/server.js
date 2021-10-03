@@ -3,6 +3,7 @@ const app = express();
 const { pool } = require("./dbConfig.js");
 const bcrypt = require("bcrypt");
 
+// Middleware
 var bodyParser = require('body-parser');
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
@@ -22,7 +23,7 @@ app.get("/api", (req, res) => {
 app.post('/users/register', async (req, res) => {
 
     let { nickname, email, password, password2 } = req.body;
-    
+
     console.log(" ########### I reveived that from server: ", nickname, email, password, password2);
 
     hashedPassword = await bcrypt.hash(password, 10); // 10 is the number of rounds for the hash
@@ -41,8 +42,6 @@ app.post('/users/register', async (req, res) => {
 
             if (results.rows.length > 0) {
                 // find a way to show a validation at the page ----------------------
-
-                //res.json({ accountExists: true });
 
                 res.send({ emailExists: true })
 
@@ -74,18 +73,42 @@ app.post('/users/register', async (req, res) => {
 });
 
 
-/* app.post("/users/register", async (req, res) => {
-    let { name, email, password, password2 } = req.body;
+// handle POST from LOGIN page
+app.post("/users/login", async (req, res) => {
 
-    console.log({
-        name, email, password, password2
-    });
-}); */
+    let { email, password } = req.body;
 
+    console.log(email);
+    console.log(password);
 
+    pool.query(
+        `SELECT * FROM users WHERE email = $1`,
+        [email],
+        (err, results) => { 
+            if (results.rows.length > 0) { 
+                console.log("EMAIL EXISTS in DB");
+                const user = results.rows[0];
+                console.log(user); // JSON Object -> id, name, email, password
 
-    /*
-     */
+                bcrypt.compare(password, user.password, (err, isMatch) => {
+                    if(isMatch) {
+                        console.log("WE HAVE A MATCH (PASSWORD)!!!!!");
+                        res.send({ passwordIsCorrect: true })
+                    }
+                    else{
+                        console.log("WE DONT HAVE A MATCH (PASSWORD)");
+                        res.send({ passwordIsCorrect: true })
+                    }
+                  });
+            }
+            else{
+                console.log("EMAIL DOES NOT EXIST in DB");
+            }
+        }  
+    );
+}
+
+);
 
 // listen port
 
