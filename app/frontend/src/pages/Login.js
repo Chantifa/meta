@@ -16,12 +16,9 @@ function Login() {
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify(data)
         })
-        .then(res => res.json())
-        .then((response) => {
+            .then(res => res.json())
+            .then((response) => {
                 setPasswordIsCorrect(response.passwordIsCorrect);
-                if(passwordIsCorrect){
-                    window.location.href = '/Dashboard';
-                }
             })
     }
 
@@ -52,10 +49,14 @@ function Login() {
                     />
                 </div>
                 <div>
-                    <input type="submit" value="Login" />
+                    {!passwordIsCorrect && <input type="submit" value="Login" />}
                 </div>
+                <div style={{padding: 30}}>
+                    {passwordIsCorrect && <Link to="/Dashboard" style={{ color: "red", fontSize: 20, borderStyle: 'solid', margin: 10 }}>Click here to log into the game</Link>}
+                </div>
+                <br />
 
-                <Link to="/register">Register</Link>
+                {!passwordIsCorrect && <Link to="/register">Register</Link>}
             </form>
         </div>
     )
