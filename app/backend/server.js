@@ -97,7 +97,7 @@ app.post("/users/login", async (req, res) => {
                     }
                     else{
                         console.log("WE DONT HAVE A MATCH (PASSWORD)");
-                        res.send({ passwordIsCorrect: true })
+                        res.send({ passwordIsCorrect: false })
                     }
                   });
             }
