@@ -1,0 +1,18 @@
+{
+  "users":[
+    {
+      "id": "1",
+      "username": "chantale",
+      "email":"chantifa@windowslive.com"
+    },
+    {
+      "id": "2",
+      "username": "theo",
+      "email": "theologos.baxevanos@students.ffhs.ch"
+    },
+    {
+      "id": "3",
+      "username": "ajg",
+      "email": "ajg@gmail.com"
+    }]
+}
