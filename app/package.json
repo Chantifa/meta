@@ -1,7 +1,7 @@
 {
   "name": "coronattack",
   "version": "0.1.0",
-  "main": "server.js",
+  "main": "index.js",
   "type": "module",
   "dependencies": {
     "express": "^4.17.1",
@@ -9,10 +9,11 @@
     "socket.io": "^4.2.0"
   },
   "scripts": {
-    "start": "nodemon server.js",
+    "start": "nodemon server.cjs",
     "start-client": "npm --prefix ./client start",
     "start-all": "npm start & npm run start-client && fg",
-    "test": "echo 'no tests for server yet' && exit 0"  },
+    "test": "echo 'no tests for server yet' && exit 0"
+  },
   "repository": {
     "type": "git",
     "url": "https://git.ffhs.ch/chantale.gihara/coronattack.git"
@@ -25,7 +26,7 @@
   },
   "nodemonConfig": {
     "ignore": [
-      "client/src/*.js"
+      "client/src/*.mjs"
     ]
   }
 }
