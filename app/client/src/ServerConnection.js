@@ -1,7 +1,7 @@
 import {useEffect, useRef, useState} from "react";
 import io from "socket.io-client";
-import {CHAT_REQUEST, JOIN_ROOM} from "./common/Requests.mjs";
-import {CHAT_ANNOUNCEMENT, CHAT_MESSAGE, ERROR} from "./common/Responses.mjs";
+import {CHAT_REQUEST, JOIN_ROOM} from "./common/Requests.js";
+import {CHAT_ANNOUNCEMENT, CHAT_MESSAGE, ERROR} from "./common/Responses.js";
 
 export default function useServer(userName, roomName) {
     const socketRef = useRef(null)

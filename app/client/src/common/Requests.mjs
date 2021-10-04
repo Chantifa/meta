@@ -40,33 +40,6 @@ export const LEAVE_ROOM = {
     }
 }
 
-/**
- * The message to submit your question
- * @type {{getDto(question:string): {question: string}, id: string}}
- */
-export const GAME_QUESTION = {
-    id: "GAME_QUESTION",
-    getDto(question) {
-        return {
-            question
-        }
-    }
-}
-
-/**
- * The message to submit votes
- * true means yes, false means no
- * @type {{getDto(question: string, vote: boolean): {question: string, vote: boolean}, id: string}}
- */
-export const GAME_VOTE = {
-    id: "GAME_VOTE",
-    getDto(question, vote) {
-        return {
-            question,
-            vote
-        }
-    }
-}
 
 export const GAME_START = {
     id: "GAME_START",

@@ -7,12 +7,29 @@ import { ActionCreators } from './services/actions/profile';
 import './main.css';
 
 class App extends React.Component {
+  state = {
+    data: null
+  };
+
   componentDidMount() {
-    const user = getStore('user')
-    if (user) {
-      this.props.dispatch(ActionCreators.login(user));
-    }
+    this.callBackendAPI()
+    .then(res => this.setState({ data: res.express }))
+    .catch(err => console.log(err));
+}
+  // fetching the GET route from the Express server which matches the GET route from server.js
+callBackendAPI = async () => {
+  const response = await fetch('/express_backend');
+  const body = await response.json();
+  const user = getStore('user')
+  if (user) {
+    this.props.dispatch(ActionCreators.login(user));
   }
+  if (response.status !== 200) {
+    throw Error(body.message) 
+  }
+  return body;
+};
+  
   render() {
     return (
       <div>
@@ -22,12 +39,6 @@ class App extends React.Component {
       </div>
     )
   }
-}
 
-const mapStateToProps = (state) => {
-  return {
-    profile: state.user.profile
-  }
 }
-
-export default connect(mapStateToProps)(App);
+export default App;
