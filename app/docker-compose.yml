@@ -1,7 +1,6 @@
 version: "3"
 
 services:
-
   storage:
     container_name: storage
     build: ./backend/storage
