@@ -1,7 +1,7 @@
-import {CHAT_REQUEST, JOIN_ROOM} from "./client/src/common/Requests.mjs";
+import {CHAT_REQUEST, JOIN_ROOM} from "./client/src/common/Requests";
 import {Server} from "socket.io";
 import express from "express";
-import {CHAT_ANNOUNCEMENT, CHAT_MESSAGE} from "./client/src/common/Responses.mjs";
+import {CHAT_ANNOUNCEMENT, CHAT_MESSAGE} from "./client/src/common/Responses";
 
 
 const express = require('express'); //Line 1
