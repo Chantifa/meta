@@ -2,7 +2,7 @@ import { React, useState, useEffect } from 'react';
 import { Link } from "react-router-dom";
 import '../styles/DashboardStyle.css';
 import socketClient from "socket.io-client";
-const CHAT_SERVER = "http://127.0.0.1:3002";
+const CHAT_SERVER = "http://127.0.0.1:3002/";
 
 function Dashboard() {
 
@@ -21,24 +21,22 @@ function Dashboard() {
     }
 
     useEffect(() => {
-        loadMessages();   
+        loadMessages();
     },
-     // eslint-disable-next-line 
-    [messages])
+    // eslint-disable-next-line
+        []) // [messages] -> it stacks but overflows
 
     const handleSubmit = (e) => {
         e.preventDefault();
+        //save input field to 'chat message' and send it to server
         socket.emit('chat message', inputValue);
         setInputValue("");
-        console.log("SUBMITTED ---> ", inputValue);
-        //console.log("Static Messages from backend ----->", messages)
     }
-
 
     return (
         <div>
             <h1>Dashboard</h1>
-            <h1>Game here</h1>
+            <div style={{backgroundColor: "blue", color: "white"}}>Game here</div>
 
             <div className="chatBox">
                 <h1>Chat here</h1>
@@ -49,7 +47,6 @@ function Dashboard() {
                         onChange={(e) => setInputValue(e.target.value)} />
                     <button type="submit" className="send-button">Send</button>
                 </form>
-
             </div>
 
             <Link to="/">Logout</Link>
@@ -61,9 +58,6 @@ function Dashboard() {
                     })}
                 </ul>
             </div>
-
-            
-
         </div>
     )
 }
