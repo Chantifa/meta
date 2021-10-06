@@ -1,7 +1,7 @@
-import {React, useState, useEffect} from 'react';
+import { React, useState, useEffect } from 'react';
 import { Link } from "react-router-dom";
 import '../styles/DashboardStyle.css';
-import socketClient  from "socket.io-client";
+import socketClient from "socket.io-client";
 const SERVER = "http://127.0.0.1:3002";
 
 function Dashboard() {
@@ -9,13 +9,13 @@ function Dashboard() {
     const [messages, setMessages] = useState([]);
     const [inputValue, setInputValue] = useState("")
 
-    const  socket = socketClient (SERVER);
+    const socket = socketClient(SERVER);
 
     socket.on('connection', () => {
         console.log(`I'm connected with the back-end`);
         socket.on('chat message', (msg) => {
             console.log('message: ' + msg);
-          });
+        });
     });
 
     const loadMessages = async () => {
@@ -29,7 +29,7 @@ function Dashboard() {
 
         */
 
-        socket.on('chat message', function(msg) {
+        socket.on('chat message', function (msg) {
 
             const addMessage = [...messages];
             addMessage.push(msg);
@@ -41,13 +41,14 @@ function Dashboard() {
     }
 
     useEffect(() => {
-    loadMessages();
+        loadMessages();
     }, [])
 
     const handleSubmit = (e) => {
         e.preventDefault();
         socket.emit('chat message', inputValue);
-        console.log("SUBMITTED ---> ", inputValue );
+        setInputValue("");
+        console.log("SUBMITTED ---> ", inputValue);
         //console.log("Static Messages from backend ----->", messages)
     }
 
@@ -58,26 +59,29 @@ function Dashboard() {
             <h1>Game here</h1>
 
             <div className="chatBox">
-                    <h1>Chat here</h1>
-                    <form onSubmit={handleSubmit}>
-                        <input type="text" 
+                <h1>Chat here</h1>
+                <form onSubmit={handleSubmit}>
+                    <input type="text"
                         className="message-input"
-                        value={inputValue} 
-                        onChange={(e) => setInputValue(e.target.value)}   />
-                        <button type="submit" className="send-button">Send</button>
-                    </form>
-                    
-                </div>
+                        value={inputValue}
+                        onChange={(e) => setInputValue(e.target.value)} />
+                    <button type="submit" className="send-button">Send</button>
+                </form>
 
-                <ul>
-                {messages.map((message, index) => {
-                       return <li key={index}>{message}</li>
-                 })}
-                {window.scrollTo(0, document.body.scrollHeight)}
-              </ul>
-                
+            </div>
 
             <Link to="/">Logout</Link>
+
+            <div className="chatWindow">
+                <ul>
+                    {messages.map((message, index) => {
+                        return <div key={index} className="liMessage">{message}</div>
+                    })}
+                </ul>
+            </div>
+
+            
+
         </div>
     )
 }
