@@ -3,6 +3,7 @@ const app = express();
 const { pool } = require("./dbConfig.js");
 const bcrypt = require("bcrypt");
 
+// Middleware
 var bodyParser = require('body-parser');
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
@@ -19,11 +20,10 @@ app.get("/api", (req, res) => {
     res.json({ message: "Hello from server!" });
 });
 
-<<<<<<< HEAD:app/backend/server.js
 app.post('/users/register', async (req, res) => {
 
     let { nickname, email, password, password2 } = req.body;
-    
+
     console.log(" ########### I reveived that from server: ", nickname, email, password, password2);
 
     hashedPassword = await bcrypt.hash(password, 10); // 10 is the number of rounds for the hash
@@ -42,8 +42,6 @@ app.post('/users/register', async (req, res) => {
 
             if (results.rows.length > 0) {
                 // find a way to show a validation at the page ----------------------
-
-                //res.json({ accountExists: true });
 
                 res.send({ emailExists: true })
 
@@ -75,27 +73,100 @@ app.post('/users/register', async (req, res) => {
 });
 
 
-/* app.post("/users/register", async (req, res) => {
-    let { name, email, password, password2 } = req.body;
+// handle POST from LOGIN page
+app.post("/users/login", async (req, res) => {
 
-    console.log({
-        name, email, password, password2
-    });
-}); */
+    let { email, password } = req.body;
+
+    console.log(email);
+    console.log(password);
+
+    pool.query(
+        `SELECT * FROM users WHERE email = $1`,
+        [email],
+        (err, results) => {
+            if (results.rows.length > 0) {
+                console.log("EMAIL EXISTS in DB");
+                const user = results.rows[0];
+                console.log(user); // JSON Object -> id, name, email, password
+
+                bcrypt.compare(password, user.password, (err, isMatch) => {
+                    if (isMatch) {
+                        console.log("WE HAVE A MATCH (PASSWORD)!!!!!");
+                        res.send({ passwordIsCorrect: true })
+                    }
+                    else {
+                        console.log("WE DONT HAVE A MATCH (PASSWORD)");
+                        res.send({ passwordIsCorrect: false })
+                    }
+                });
+            }
+            else {
+                console.log("EMAIL DOES NOT EXIST in DB");
+            }
+        }
+    );
+});
+
+//chat #######################################################
+
+//const http = require('http').createServer(app);
+//const io = require('socket.io')(http);
+/**
+ * http.listen(PORT_CHAT, () => {
+    console.log(`Chat runs on port ${PORT_CHAT}`);
+});
+ */
+
+const http = require('http');
+const server = http.createServer(app);
+const { Server } = require("socket.io");
+const io = new Server(server);
+
+const PORT_CHAT = 3002;
+
+// CHAT LISTEN PORT
+server.listen(PORT_CHAT, () => {
+    console.log(`Chat runs on port ${PORT_CHAT}`);
+});
+
+// socket object -> to send messages to client
+io.on('connection', (socket) => { 
+    console.log('new user connected');
+    //socket.emit('connection', null);
+    socket.on('disconnect', () => {
+    console.log('user disconnected')})
+
+    // weiter
+    socket.broadcast.emit('hi');
+    socket.on('chat message', (msg) => {
+        io.emit('chat message', msg);
+        console.log("takes the message from the frontend input field --> ", msg);
+      });
+    
+
+});
 
 
+const STATIC_MESSAGES = ['first-message', 'second-message'];
 
-    /*
-     */
+// create a way tofetch channels
+
+app.get("/getMessages", (req, res) => {
+    res.json({
+        message: msg
+    })
+});
+
+
+// chat end #######################################################
 
 // listen port
-
 app.listen(PORT, () => {
     console.log(`backend runs on port ${PORT}`);
 });
-=======
+
 let server = app.listen(process.env.PORT || 5000, function () {
     let port = server.address().port;
     console.log("App now running on port", port);
 });
->>>>>>> 26c1e06d009ef90564c6899360fb4ae2b386b092:app/frontend/server.js
