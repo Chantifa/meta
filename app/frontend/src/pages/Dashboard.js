@@ -12,7 +12,7 @@ function Dashboard() {
     const socket = socketClient(SERVER);
 
     socket.on('connection', () => {
-        console.log(`I'm connected with the back-end`);
+        //console.log(`I'm connected with the back-end`);
         socket.on('chat message', (msg) => {
             console.log('message: ' + msg);
         });
@@ -20,22 +20,10 @@ function Dashboard() {
 
     const loadMessages = async () => {
 
-        /*
-        fetch('http://localhost:3002/getMessages').then(async response => {
-            let data = await response.json();
-            setMessages(data.channels);
-            console.log(messages);
-        })
-
-        */
-
         socket.on('chat message', function (msg) {
-
             const addMessage = [...messages];
             addMessage.push(msg);
             setMessages(addMessage);
-
-            //setMessages(msg);
         });
 
     }
