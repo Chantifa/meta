@@ -2,35 +2,29 @@ import { React, useState, useEffect } from 'react';
 import { Link } from "react-router-dom";
 import '../styles/DashboardStyle.css';
 import socketClient from "socket.io-client";
-const SERVER = "http://127.0.0.1:3002";
+const CHAT_SERVER = "http://127.0.0.1:3002";
 
 function Dashboard() {
 
     const [messages, setMessages] = useState([]);
     const [inputValue, setInputValue] = useState("")
 
-    const socket = socketClient(SERVER);
-
-    socket.on('connection', () => {
-        //console.log(`I'm connected with the back-end`);
-        socket.on('chat message', (msg) => {
-            console.log('message: ' + msg);
-        });
-    });
+    const socket = socketClient(CHAT_SERVER);
 
     const loadMessages = async () => {
 
         socket.on('chat message', function (msg) {
-            const addMessage = [...messages];
-            addMessage.push(msg);
-            setMessages(addMessage);
+            const newMessageArray = [...messages];
+            newMessageArray.push(msg);
+            setMessages(newMessageArray);
         });
-
     }
 
     useEffect(() => {
-        loadMessages();
-    }, [])
+        loadMessages();   
+    },
+     // eslint-disable-next-line 
+    [messages])
 
     const handleSubmit = (e) => {
         e.preventDefault();
