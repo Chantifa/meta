@@ -1,0 +1,30 @@
+body {
+  padding: 0px;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.send-button {
+   margin: 10px;
+}
+
+  .send-container {
+    position: fixed;
+    padding-bottom: 30px;
+    bottom: 0;
+    background-color: white;
+    max-width: 1200px;
+    width: 80%;
+    display: flex;
+  }
+
+  .message-input {
+    flex-grow: 1;
+  }
+
+  .chatBox {
+    border-style: solid;
+    border-color: rebeccapurple;
+    padding: 20px;
+  }

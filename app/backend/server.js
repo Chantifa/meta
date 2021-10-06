@@ -20,6 +20,8 @@ app.get("/api", (req, res) => {
     res.json({ message: "Hello from server!" });
 });
 
+
+
 app.post('/users/register', async (req, res) => {
 
     let { nickname, email, password, password2 } = req.body;
@@ -84,34 +86,84 @@ app.post("/users/login", async (req, res) => {
     pool.query(
         `SELECT * FROM users WHERE email = $1`,
         [email],
-        (err, results) => { 
-            if (results.rows.length > 0) { 
+        (err, results) => {
+            if (results.rows.length > 0) {
                 console.log("EMAIL EXISTS in DB");
                 const user = results.rows[0];
                 console.log(user); // JSON Object -> id, name, email, password
 
                 bcrypt.compare(password, user.password, (err, isMatch) => {
-                    if(isMatch) {
+                    if (isMatch) {
                         console.log("WE HAVE A MATCH (PASSWORD)!!!!!");
                         res.send({ passwordIsCorrect: true })
                     }
-                    else{
+                    else {
                         console.log("WE DONT HAVE A MATCH (PASSWORD)");
                         res.send({ passwordIsCorrect: false })
                     }
-                  });
+                });
             }
-            else{
+            else {
                 console.log("EMAIL DOES NOT EXIST in DB");
             }
-        }  
+        }
     );
-}
+});
 
-);
+//chat #######################################################
+
+//const http = require('http').createServer(app);
+//const io = require('socket.io')(http);
+/**
+ * http.listen(PORT_CHAT, () => {
+    console.log(`Chat runs on port ${PORT_CHAT}`);
+});
+ */
+
+const http = require('http');
+const server = http.createServer(app);
+const { Server } = require("socket.io");
+const io = new Server(server);
+
+const PORT_CHAT = 3002;
+
+// CHAT LISTEN PORT
+server.listen(PORT_CHAT, () => {
+    console.log(`Chat runs on port ${PORT_CHAT}`);
+});
+
+// socket object -> to send messages to client
+io.on('connection', (socket) => { 
+    console.log('new user connected');
+    //socket.emit('connection', null);
+    socket.on('disconnect', () => {
+    console.log('user disconnected')})
+
+    // weiter
+    socket.broadcast.emit('hi');
+    socket.on('chat message', (msg) => {
+        io.emit('chat message', msg);
+        console.log("takes the message from the frontend input field --> ", msg);
+      });
+    
+
+});
+
+
+const STATIC_MESSAGES = ['first-message', 'second-message'];
+
+// create a way tofetch channels
+
+app.get("/getMessages", (req, res) => {
+    res.json({
+        message: msg
+    })
+});
+
+
+// chat end #######################################################
 
 // listen port
-
 app.listen(PORT, () => {
     console.log(`backend runs on port ${PORT}`);
 });

@@ -45,7 +45,8 @@ function Register() {
                         id="email"
                         name="email"
                         placeholder="Email"
-                        value={email} onChange={(e) => setemail(e.target.value)}
+                        value={email} 
+                        onChange={(e) => setemail(e.target.value)}
                         required
                     />
                 </div>
@@ -55,7 +56,8 @@ function Register() {
                         id="password"
                         name="password"
                         placeholder="Password"
-                        value={password} onChange={(e) => setpassword(e.target.value)}
+                        value={password} 
+                        onChange={(e) => setpassword(e.target.value)}
                         required
                     />
                 </div>

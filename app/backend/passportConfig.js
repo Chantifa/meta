@@ -5,8 +5,6 @@ const bcrypt = require("bcrypt");
 function initialize(passport) {
   console.log("Initialized");
 
-  
-  
     const authenticateUser = (email, password, done) => {
     console.log(email, password);
     pool.query(
