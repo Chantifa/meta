@@ -10,7 +10,8 @@ services:
     environment:
       NODE_ENV: production
     ports:
-      - 3000:3000
+      - 3001:3001
+      - 3002:3002
 
   frontend:
     image: frontend
@@ -20,7 +21,7 @@ services:
     environment:
       NODE_ENV: production
     ports:
-      - 3002:3002
+      - 3000:3000
 
   storage:
     container_name: storage
