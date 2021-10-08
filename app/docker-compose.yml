@@ -8,7 +8,7 @@ services:
       context: /backend
       dockerfile: ./Dockerfile
     environment:
-      NODE_ENV: production
+      NODE_ENV: dev
     ports:
       - 3001:3001
       - 3002:3002
@@ -38,5 +38,6 @@ services:
 
 volumes:
   postgres-volume:
+
 
 
