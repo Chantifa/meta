@@ -28,6 +28,7 @@ services:
     build: ./backend/storage
     volumes:
       - postgres-volume:/var/lib/postgresql/data
+      - .backend/storage/dump:/docker-entrypoint-initdb.d/ddl.sql
     environment:
       POSTGRES_USER: postgres
       POSTGRES_PASSWORD: secret
