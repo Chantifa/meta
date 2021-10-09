@@ -10,8 +10,7 @@ services:
     environment:
       NODE_ENV: dev
     ports:
-      - 3001:3001
-      - 3002:3002
+      - 3001:3002
 
   frontend:
     image: frontend
@@ -28,7 +27,6 @@ services:
     build: ./backend/storage
     volumes:
       - postgres-volume:/var/lib/postgresql/data
-      - .backend/storage/dump:/docker-entrypoint-initdb.d/ddl.sql
     environment:
       POSTGRES_USER: postgres
       POSTGRES_PASSWORD: secret
