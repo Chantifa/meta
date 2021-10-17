@@ -1,0 +1,57 @@
+*{
+    background-color: rgb(112, 65, 108);
+}
+
+.title{
+    color: white;
+    margin: 10px;
+    font-size: 60px;
+    text-decoration: underline;
+}
+
+.loginLink {
+    color: white;
+    text-decoration: none;
+    transition: all 500ms;
+    margin: 10px;
+    background-color: Crimson;  
+    border-radius: 5px;
+    padding: 0.5em;
+    width: fit-content;
+}
+
+.loginLink:hover {
+    color: white;
+    cursor: pointer;
+    font-size:50px;
+    font-size-adjust: 20px;
+}
+
+.welcomeTextStyle {
+    color: white;
+    width: 400px;
+    margin-top: 80px;
+    padding: 10px;
+    text-align: center;
+}
+
+.manageHomeDivs {
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.middleHomeDiv {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.homeImage {
+    width: 50%;
+    height: 250px;
+    margin: 20px;
+    border-radius: 50%;
+    opacity: 0.8;
+}
