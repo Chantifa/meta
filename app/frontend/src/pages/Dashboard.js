@@ -35,21 +35,22 @@ function Dashboard() {
 
     return (
         <div>
-            <h1>Dashboard</h1>
-            <div style={{backgroundColor: "blue", color: "white"}}>Game here</div>
+            <h1 className="titleDash">Dashboard</h1>
+            
+            <div style={{color: "blue"}}>Game here</div>
 
-            <div className="chatBox">
-                <h1>Chat here</h1>
+            <div>
+                <h1 style={{color: "white"}}>Chat here</h1>
                 <form onSubmit={handleSubmit}>
                     <input type="text"
-                        className="message-input"
                         value={inputValue}
                         onChange={(e) => setInputValue(e.target.value)} />
                     <button type="submit" className="send-button">Send</button>
                 </form>
             </div>
 
-            <Link to="/">Logout</Link>
+            <br />
+            <Link to="/" className="logoutBtn">Logout</Link>
 
             <div className="chatWindow">
                 <ul>
@@ -58,6 +59,7 @@ function Dashboard() {
                     })}
                 </ul>
             </div>
+
         </div>
     )
 }

@@ -1,12 +1,15 @@
-body {
-  padding: 0px;
-  margin: 0;
-  display: flex;
-  justify-content: center;
+.send-button {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  background-color: rgb(57, 187, 79);
+  color: white;
 }
 
-.send-button {
-   margin: 10px;
+.send-button:hover {
+  opacity: 0.8;
 }
 
   .send-container {
@@ -17,17 +20,6 @@ body {
     max-width: 1200px;
     width: 80%;
     display: flex;
-  }
-
-  .message-input {
-    flex-grow: 1;
-  }
-
-  .chatBox {
-    border-style: solid;
-    border-color: rebeccapurple;
-    padding: 20px;
-    margin: 10px;
   }
 
   .chatWindow {
@@ -44,3 +36,21 @@ body {
     padding: 10px;
     margin: 10px 0;
   }
+
+  .logoutBtn {
+    width: auto;
+    padding: 10px 18px;
+    background-color: #f44336;
+    text-decoration: none;
+    color: white;
+  }
+
+  .logoutBtn:hover {
+      opacity: 0.8;
+  }
+
+  .titleDash{
+    color: white;
+    margin: 10px;
+    font-size: 60px;
+}

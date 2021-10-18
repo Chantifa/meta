@@ -1,5 +1,7 @@
 body {
     background-color: rgb(112, 65, 108);
+    display: flex;
+    justify-content: center;
 }
 
 .manageHomeDivs {
