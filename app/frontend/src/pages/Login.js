@@ -1,6 +1,7 @@
 import { React, useState } from 'react';
 import { Link } from "react-router-dom";
 import '../styles/LoginStyle.css';
+import illVirus from '../images/illVirus.png';
 
 function Login() {
 
@@ -26,6 +27,7 @@ function Login() {
     return (
         <div>
             <h1 className="titleLogin">Login</h1>
+            <img src={illVirus} alt="loginImage"/>
             <form onSubmit={handleSubmit}>
                 <div>
                     <input

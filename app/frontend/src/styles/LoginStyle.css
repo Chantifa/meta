@@ -1,6 +1,7 @@
 form {
     border: 3px solid #f1f1f1;
     padding: 40px;
+    margin: 10px;
 }
 
 .titleLogin{
@@ -42,4 +43,15 @@ input[type=email], input[type=password] {
 
   .registerBtn:hover {
       opacity: 0.8;
+  }
+
+  .loginImage {
+      width: 10%;
+      height: 10%;
+  }
+
+  img {
+      width: 40%;
+      padding: 10px;
+      margin-left: 8em;
   }
