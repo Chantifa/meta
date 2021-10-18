@@ -1,5 +1,11 @@
-*{
+body {
     background-color: rgb(112, 65, 108);
+}
+
+.manageHomeDivs {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .title{
@@ -7,6 +13,28 @@
     margin: 10px;
     font-size: 60px;
     text-decoration: underline;
+}
+
+.middleHomeDiv {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.welcomeTextStyle {
+    color: white;
+    width: 400px;
+    margin-top: 80px;
+    padding: 10px;
+    text-align: center;
+}
+
+.homeImage {
+    width: 50%;
+    height: 250px;
+    margin: 20px;
+    border-radius: 50%;
+    opacity: 0.8;
 }
 
 .loginLink {
@@ -25,33 +53,5 @@
     cursor: pointer;
     font-size:50px;
     font-size-adjust: 20px;
-}
-
-.welcomeTextStyle {
-    color: white;
-    width: 400px;
-    margin-top: 80px;
-    padding: 10px;
-    text-align: center;
-}
-
-.manageHomeDivs {
-    
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
-.middleHomeDiv {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-}
-
-.homeImage {
-    width: 50%;
-    height: 250px;
-    margin: 20px;
-    border-radius: 50%;
     opacity: 0.8;
 }

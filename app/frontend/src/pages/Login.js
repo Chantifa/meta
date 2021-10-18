@@ -1,5 +1,6 @@
 import { React, useState } from 'react';
 import { Link } from "react-router-dom";
+import '../styles/LoginStyle.css';
 
 function Login() {
 
@@ -24,7 +25,7 @@ function Login() {
 
     return (
         <div>
-            <h1>Coronattack Login</h1>
+            <h1 className="titleLogin">Login</h1>
             <form onSubmit={handleSubmit}>
                 <div>
                     <input
@@ -49,14 +50,14 @@ function Login() {
                     />
                 </div>
                 <div>
-                    {!passwordIsCorrect && <input type="submit" value="Login" />}
+                    {!passwordIsCorrect && <input type="submit" value="Login" className="buttonNext" />}
                 </div>
-                <div style={{padding: 30}}>
-                    {passwordIsCorrect && <Link to="/Dashboard" style={{ color: "red", fontSize: 20, borderStyle: 'solid', margin: 10 }}>Click here to log into the game</Link>}
+                <div>
+                    {passwordIsCorrect && <Link to="/Dashboard" className="buttonNext" >Click here to log into the game</Link>}
                 </div>
                 <br />
 
-                {!passwordIsCorrect && <Link to="/register">Register</Link>}
+                {!passwordIsCorrect && <Link to="/register" className="registerBtn">Register</Link>}
             </form>
         </div>
     )
