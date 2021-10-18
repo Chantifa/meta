@@ -35,7 +35,8 @@ function Dashboard() {
 
     return (
         <div>
-            <h1 className="titleDash">Dashboard</h1>
+            <h1 className="titleDash">Coronattack</h1>
+            <h3 style={{color: "white", marginLeft: 80}}>Create or join a game</h3>
             
             <div style={{color: "blue"}}>Game here</div>
 
