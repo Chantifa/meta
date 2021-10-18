@@ -6,6 +6,7 @@
   box-sizing: border-box;
   background-color: rgb(57, 187, 79);
   color: white;
+  cursor: pointer;
 }
 
 .send-button:hover {
