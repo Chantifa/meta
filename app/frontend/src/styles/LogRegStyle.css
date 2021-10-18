@@ -10,7 +10,7 @@ form {
     font-size: 60px;
 }
 
-input[type=email], input[type=password] {
+input[type=email], input[type=password], input[type=text] {
     width: 100%;
     padding: 12px 20px;
     margin: 8px 0;
@@ -54,4 +54,10 @@ input[type=email], input[type=password] {
       width: 40%;
       padding: 10px;
       margin-left: 8em;
+  }
+
+  .imgReg {
+    width: 30%;
+    padding: 10px;
+    margin-left: 8em;
   }

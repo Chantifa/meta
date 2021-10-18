@@ -1,6 +1,6 @@
 import { React, useState } from 'react';
 import { Link } from "react-router-dom";
-import '../styles/LoginStyle.css';
+import '../styles/LogRegStyle.css';
 import illVirus from '../images/illVirus.png';
 
 function Login() {
