@@ -8,6 +8,7 @@ import Home from '../pages/Home.js';
 import Login from '../pages/Login.js';
 import Register from '../pages/Register.js';
 import Dashboard from '../pages/Dashboard.js';
+import CreateGame from "../pages/CreateGame.js";
 
 function RoutingLogic() {
     return (
@@ -17,6 +18,7 @@ function RoutingLogic() {
                 <Route path="/dashboard" component={Dashboard}></Route>
                 <Route path="/register" component={Register}></Route>
                 <Route path="/login" component={Login} />
+                <Route path="/creategame" component={CreateGame} />
             </Switch>
         </Router>
     )

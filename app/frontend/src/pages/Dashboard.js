@@ -2,9 +2,12 @@ import { React, useState, useEffect } from 'react';
 import { Link } from "react-router-dom";
 import '../styles/DashboardStyle.css';
 import socketClient from "socket.io-client";
+import { useHistory } from "react-router-dom";
 const CHAT_SERVER = "http://127.0.0.1:3002/";
 
 function Dashboard() {
+
+    const history = useHistory();
 
     const [messages, setMessages] = useState([]);
     const [inputValue, setInputValue] = useState("")
@@ -33,13 +36,18 @@ function Dashboard() {
         setInputValue("");
     }
 
+    const handleCreate = () => {
+        let path = '/creategame'; 
+    history.push(path);
+    }
+
     return (
         <div>
             <h1 className="titleDash">Coronattack</h1>
             <h3 style={{color: "white", marginLeft: 80}}>Create or join a game</h3>
             
             <div>
-                <button className="createJoinBtn" style={{backgroundColor: "#3bb359" }}>Create a new game</button>
+                <button className="createJoinBtn" style={{backgroundColor: "#3bb359" }} onClick={handleCreate}>Create a new game</button>
                 <button className="createJoinBtn" style={{backgroundColor: "#4aadbe" }}>Join a game</button>
             </div>
 
