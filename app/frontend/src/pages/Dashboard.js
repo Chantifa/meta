@@ -38,7 +38,10 @@ function Dashboard() {
             <h1 className="titleDash">Coronattack</h1>
             <h3 style={{color: "white", marginLeft: 80}}>Create or join a game</h3>
             
-            <div style={{color: "blue"}}>Game here</div>
+            <div>
+                <button className="createJoinBtn" style={{backgroundColor: "#3bb359" }}>Create a new game</button>
+                <button className="createJoinBtn" style={{backgroundColor: "#4aadbe" }}>Join a game</button>
+            </div>
 
             <div>
                 <h1 style={{color: "white"}}>Chat here</h1>
