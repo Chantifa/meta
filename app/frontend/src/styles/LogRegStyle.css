@@ -27,6 +27,7 @@ input[type=email], input[type=password], input[type=text] {
     border: none;
     cursor: pointer;
     width: 100%;
+    text-decoration: none;
   }
   
   .buttonNext:hover {

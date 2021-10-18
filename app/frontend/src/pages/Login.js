@@ -55,6 +55,7 @@ function Login() {
                     {!passwordIsCorrect && <input type="submit" value="Login" className="buttonNext" />}
                 </div>
                 <div>
+                    <br />
                     {passwordIsCorrect && <Link to="/Dashboard" className="buttonNext" >Click here to log into the game</Link>}
                 </div>
                 <br />
