@@ -1,7 +1,12 @@
-import React from 'react';
+import {React, useState} from 'react';
 import '../styles/MainGameStyle.css';
 
 function MainGame() {
+
+    const [scoreA, setScoreA] = useState(0);
+    const [scoreB, setScoreB] = useState(0);
+
+
     return (
         <div>
 
@@ -26,8 +31,8 @@ function MainGame() {
                 </div>
             </div>
             <div className="scoreboard">
-                <div className="score"> A : <span id="score-a">0</span></div>
-                <div className="score"> B : <span id="score-b">0</span></div>
+                <div className="score"> A : {scoreA}</div>
+                <div className="score"> B : {scoreB}</div>
             </div>
 
         </div>
