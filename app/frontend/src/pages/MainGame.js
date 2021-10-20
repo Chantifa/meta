@@ -1,15 +1,15 @@
 import {React, useState} from 'react';
 import '../styles/MainGameStyle.css';
 
-function MainGame() {
+function MainGame(props) {
 
     const [scoreA, setScoreA] = useState(0);
     const [scoreB, setScoreB] = useState(0);
 
     return (
         <div>
-
-            <div className="game">
+            <div style={{color: "white"}}>Game: {props.gameName}</div>
+            <div className="game"> 
                 <div className="playground">
                     <div className="paddle-hand-right"></div>
                     <div className="paddle-hand-left"></div>

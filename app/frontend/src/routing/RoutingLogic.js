@@ -1,4 +1,4 @@
-import React from "react";
+import { React, useState } from "react";
 import {
     BrowserRouter as Router,
     Switch,
@@ -12,6 +12,9 @@ import CreateGame from "../pages/CreateGame.js";
 import MainGame from "../pages/MainGame.js";
 
 function RoutingLogic() {
+
+    const [gameName, setGameName] = useState("");
+
     return (
         <Router>
             <Switch>
@@ -19,8 +22,13 @@ function RoutingLogic() {
                 <Route path="/dashboard" component={Dashboard}></Route>
                 <Route path="/register" component={Register}></Route>
                 <Route path="/login" component={Login} />
-                <Route path="/creategame" component={CreateGame} />
-                <Route path="/maingame" component={MainGame} />
+                <Route path="/creategame" render={(props) => (
+                    <CreateGame {...props} gameName={gameName} setGameName={setGameName} />
+                )}
+                />
+                <Route path="/maingame" render={(props) => (
+                    <MainGame {...props} gameName={gameName} />
+                )} />
             </Switch>
         </Router>
     )
