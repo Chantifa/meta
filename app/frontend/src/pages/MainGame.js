@@ -6,28 +6,16 @@ function MainGame() {
     const [scoreA, setScoreA] = useState(0);
     const [scoreB, setScoreB] = useState(0);
 
-
     return (
         <div>
 
             <div className="game">
                 <div className="playground">
-                    playground
-                    <div className="paddle-hand-right">
-                        paddlehand right
-                    </div>
-                    <div className="paddle-hand-left">
-                        paddlehand left
-                    </div>
-                    <div className="paddleA" >
-                        paddleA
-                    </div>
-                    <div className="paddleB" >
-                        paddleB
-                    </div>
-                    <div className="ball">
-                        ball
-                    </div>
+                    <div className="paddle-hand-right"></div>
+                    <div className="paddle-hand-left"></div>
+                    <div className="paddleA"></div>
+                    <div className="paddleB"></div>
+                    <div className="ball"></div>
                 </div>
             </div>
             <div className="scoreboard">
