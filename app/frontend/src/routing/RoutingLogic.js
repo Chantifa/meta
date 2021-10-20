@@ -9,6 +9,7 @@ import Login from '../pages/Login.js';
 import Register from '../pages/Register.js';
 import Dashboard from '../pages/Dashboard.js';
 import CreateGame from "../pages/CreateGame.js";
+import MainGame from "../pages/MainGame.js";
 
 function RoutingLogic() {
     return (
@@ -19,6 +20,7 @@ function RoutingLogic() {
                 <Route path="/register" component={Register}></Route>
                 <Route path="/login" component={Login} />
                 <Route path="/creategame" component={CreateGame} />
+                <Route path="/maingame" component={MainGame} />
             </Switch>
         </Router>
     )
