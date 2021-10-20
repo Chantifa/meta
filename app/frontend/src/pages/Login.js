@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import '../styles/LogRegStyle.css';
 import illVirus from '../images/illVirus.png';
 
-function Login() {
+function Login(props) {
 
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
@@ -21,6 +21,7 @@ function Login() {
             .then(res => res.json())
             .then((response) => {
                 setPasswordIsCorrect(response.passwordIsCorrect);
+                props.setPlayerA(response.username);
             })
     }
 

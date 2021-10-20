@@ -14,6 +14,7 @@ import MainGame from "../pages/MainGame.js";
 function RoutingLogic() {
 
     const [gameName, setGameName] = useState("");
+    const [playerA, setPlayerA] = useState("");
 
     return (
         <Router>
@@ -21,13 +22,15 @@ function RoutingLogic() {
                 <Route exact path="/" component={Home}></Route>
                 <Route path="/dashboard" component={Dashboard}></Route>
                 <Route path="/register" component={Register}></Route>
-                <Route path="/login" component={Login} />
+                <Route path="/login" render={(props) => (
+                    <Login {...props} playerA={playerA} setPlayerA={setPlayerA} />
+                )} />
                 <Route path="/creategame" render={(props) => (
                     <CreateGame {...props} gameName={gameName} setGameName={setGameName} />
                 )}
                 />
                 <Route path="/maingame" render={(props) => (
-                    <MainGame {...props} gameName={gameName} />
+                    <MainGame {...props} gameName={gameName} playerA={playerA} />
                 )} />
             </Switch>
         </Router>

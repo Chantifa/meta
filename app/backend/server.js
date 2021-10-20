@@ -59,7 +59,7 @@ app.post('/users/register', async (req, res) => {
 // handle POST from LOGIN page
 app.post("/users/login", async (req, res) => {
 
-    let { email, password } = req.body;
+    let { name, email, password } = req.body;
 
     pool.query(
         `SELECT * FROM users WHERE email = $1`,
@@ -72,7 +72,7 @@ app.post("/users/login", async (req, res) => {
                 bcrypt.compare(password, user.password, (err, isMatch) => {
                     if (isMatch) {
                         // password matches with the decrypted password in db
-                        res.send({ passwordIsCorrect: true })
+                        res.send({ passwordIsCorrect: true, username: user.name })
                     }
                     else {
                         // password does not match with the one in db

@@ -9,6 +9,7 @@ function MainGame(props) {
     return (
         <div>
             <div style={{color: "white"}}>Game: {props.gameName}</div>
+            <div style={{color: "white"}}>PlayerA: {props.playerA}</div>
             <div className="game"> 
                 <div className="playground">
                     <div className="paddle-hand-right"></div>
