@@ -4,9 +4,12 @@ import '../styles/MainGameStyle.css';
 
 function MainGame(props) {
 
+    // eslint-disable-next-line
     const [scoreA, setScoreA] = useState(0);
+    // eslint-disable-next-line
     const [scoreB, setScoreB] = useState(0);
 
+    // eslint-disable-next-line
     const [x, setX] = useState(0);
     const [y, setY] = useState(10);
 
@@ -15,7 +18,7 @@ function MainGame(props) {
         position: relative;
         width: 64rem;
         height: 32rem;
-    `
+    `;
     const PaddleA = styled.div`
         background-color: rgb(0, 0, 0);
         top: 0;
@@ -24,15 +27,24 @@ function MainGame(props) {
         width: 2rem;
         height: 4rem;
         left: ${({ x }) => x + 'rem'};
-        top: ${({ y }) => y + 'rem'};
-    `
+        top: ${
+            ({ y }) =>  y + 'rem'}
+    `;
+
+    /** 
+     * 
+      
+      top: ${({ y }) => (y > 0 && y <= 28) && y + 'rem'}`;
+
+     * 
+     **/
 
     const PaddleHandLeft = styled.div`
     
         background-color: red;
         background-size: contain;
         width          : 1.875rem;
-        height         : 100%;
+        height         : 32rem;
         position       : absolute;
         top            : 0;
         left: 3.125rem;
@@ -46,10 +58,11 @@ function MainGame(props) {
         return y - 1;
     }
 
-    const actionXMap = {
+    /*const actionXMap = {
         ArrowLeft: decrement,
         ArrowRight: increment
-    }
+    }*/
+
     const actionYMap = {
         ArrowDown: increment,
         ArrowUp: decrement
@@ -64,7 +77,9 @@ function MainGame(props) {
 
     useEffect(() => {
         document.addEventListener("keydown", handleKeyPress);
-    }, [])
+    }, 
+    // eslint-disable-next-line
+    [])
 
     return (
         <div>
