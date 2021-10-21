@@ -8,7 +8,7 @@ function MainGame(props) {
     const [scoreB, setScoreB] = useState(0);
 
     const [x, setX] = useState(0);
-    const [y, setY] = useState(0);
+    const [y, setY] = useState(10);
 
     const Playground = styled.section`
         background-color: rgb(10, 46, 34);
@@ -39,11 +39,11 @@ function MainGame(props) {
     
     `
 
-    function increment(x) {
-        return x + 1;
+    function increment(y) {
+        return y + 1;
     }
-    function decrement(x) {
-        return x - 1;
+    function decrement(y) {
+        return y - 1;
     }
 
     const actionXMap = {
@@ -56,10 +56,10 @@ function MainGame(props) {
     }
 
     function handleKeyPress(e) {
-        const actionX = actionXMap[e.key];
+        //const actionX = actionXMap[e.key];
         const actionY = actionYMap[e.key];
         //actionX && setX(actionX);
-        actionY && setY(actionY);
+        actionY && setY(actionY);     
     }
 
     useEffect(() => {
