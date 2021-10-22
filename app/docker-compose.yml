@@ -3,6 +3,7 @@ version: "3.4"
 services:
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
   backend:
     image: backend
@@ -24,6 +25,8 @@ services:
     ports:
       - 3000:3000
 
+=======
+>>>>>>> 4089b818982fee084d12c86d8efbcd94cf6035a0
 =======
 >>>>>>> 4089b818982fee084d12c86d8efbcd94cf6035a0
 =======
