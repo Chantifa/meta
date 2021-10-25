@@ -18,9 +18,11 @@ function Register() {
 
         fetch('http://localhost:3001/users/register', {
             method: 'POST',
-            headers: { "Content-Type": "application/json" },
+            mode: 'no-cors',
+            headers: {'Content-Type': 'application/json'
+            },
             body: JSON.stringify(data)
-        }).then(res => res.json())
+        }).then(response => response.json)
         .then((response) => {
             setAccountExists(response.emailExists);
         })

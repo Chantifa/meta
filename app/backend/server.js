@@ -1,12 +1,15 @@
+
 const express = require('express');
 const app = express();
 const { pool } = require("./dbConfig.js");
 const bcrypt = require("bcrypt");
 
 // Middleware
-var bodyParser = require('body-parser');
-app.use(bodyParser.urlencoded({ extended: false }));
-app.use(bodyParser.json());
+app.use(express.urlencoded({ extended: true }));
+app.use(express.json());
+const cors = require("cors")
+app.use(cors())
+app.use("/static", express.static('./static/'));
 
 const PORT = process.env.PORT || 3001;
 
@@ -15,8 +18,7 @@ app.get('/', (req, res) => {
     res.send("Hello from backend!");
 });
 
-app.post('/users/register', async (req, res) => {
-
+app.post('http://localhost:3001/users/register', async (req, res) => {
     let { nickname, email, password, password2 } = req.body;
 
     //TODO: validation password - password2
@@ -27,7 +29,7 @@ app.post('/users/register', async (req, res) => {
     // check if the email already exists in our db
     pool.query(
         `SELECT * FROM users
-            WHERE email = $1`,
+            WHERE email = $2`,
         [email],
         (err, results) => {
             if (err) {
@@ -39,8 +41,8 @@ app.post('/users/register', async (req, res) => {
             } else {
                 // if the e-mail does not already exist in the db, we can add a new user to the db
                 pool.query(
-                    `INSERT INTO users (name, email, password)
-                    VALUES ($1, $2, $3)
+                    `INSERT INTO users (id, name, email, password)
+                    VALUES ($1, $2, $3,$4)
                     RETURNING id, name, email,  password`,
                     [nickname, email, hashedPassword], // these are the values $1 $2 $3, we give them names
                     (err, results) => {
@@ -57,12 +59,12 @@ app.post('/users/register', async (req, res) => {
 });
 
 // handle POST from LOGIN page
-app.post("/users/login", async (req, res) => {
+app.post("http://localhost:3001/users/login", async (req, res) => {
 
     let { name, email, password } = req.body;
 
     pool.query(
-        `SELECT * FROM users WHERE email = $1`,
+        `SELECT * FROM users WHERE email = $2`,
         [email],
         (err, results) => {
             // if the e-mail exists in the DB, the user exist -> go further
