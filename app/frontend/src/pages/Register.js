@@ -17,12 +17,13 @@ function Register() {
         console.log(data);
 
         fetch('http://localhost:3001/users/register', {
-            method: 'POST',
-            mode: 'no-cors',
-            headers: {'Content-Type': 'application/json'
-            },
-            body: JSON.stringify(data)
-        }).then(response => response.json)
+            method: 'POST',        
+            headers: { 'Content-Type': 'application/json',
+            'Accept':'application/json'
+                    },
+            mode:'cors',
+            body: JSON.stringify({data})
+        }).then(res => res.json())
         .then((response) => {
             setAccountExists(response.emailExists);
         })

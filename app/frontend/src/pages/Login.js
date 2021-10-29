@@ -15,10 +15,11 @@ function Login(props) {
 
         fetch('http://localhost:3001/users/login', {
             method: 'POST',
-            headers: { "Content-Type": "application/json" },
+            headers: { "Content-Type": "application/json",
+        'Accept': 'application/json' },
             body: JSON.stringify(data)
         })
-            .then(res => res.json())
+            .then(res => res.test())
             .then((response) => {
                 setPasswordIsCorrect(response.passwordIsCorrect);
                 props.setPlayerA(response.username);
