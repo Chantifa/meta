@@ -4,24 +4,30 @@ services:
 
   backend:
     image: backend
-    build:
-      context: /backend
-      dockerfile: ./Dockerfile
+    build: ./backend/
+    volumes:
+      - ./backend:/backend
+      - node_modules:/backend/node_modules
     environment:
       NODE_ENV: dev
+    depends_on:
+    - storage
     ports:
       - 3001:3001
       - 3002:3002
 
   frontend:
     image: frontend
-    build:
-      context: /frontend
-      dockerfile: ./Dockerfile
+    build: ./frontend/
+    volumes:
+      - ./frontend:/frontend
+      - node_modules:/fontend/node_modules
     environment:
       NODE_ENV: production
     ports:
       - 3000:3000
+    depends_on: 
+    - backend
 
   storage:
     container_name: storage
@@ -38,6 +44,4 @@ services:
 
 volumes:
   postgres-volume:
-
-
-
+  node_modules:

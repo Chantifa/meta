@@ -13,6 +13,7 @@
 **/*.jfm
 **/charts
 **/docker-compose*
+**/.backend
 **/compose*
 **/Dockerfile*
 **/node_modules

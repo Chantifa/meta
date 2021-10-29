@@ -1,5 +1,7 @@
 import { React, useState } from 'react';
 import { Link } from "react-router-dom";
+import '../styles/LogRegStyle.css';
+import smileygmtrans from '../images/smileygmtrans.png';
 
 function Register() {
 
@@ -14,10 +16,20 @@ function Register() {
         const data = { nickname, email, password, password2 };
         console.log(data);
 
+<<<<<<< HEAD
         fetch('/users/register', {
             method: 'POST',
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify(data)
+=======
+        fetch('http://localhost:3001/users/register', {
+            method: 'POST',        
+            headers: { 'Content-Type': 'application/json',
+            'Accept':'application/json'
+                    },
+            mode:'cors',
+            body: JSON.stringify({data})
+>>>>>>> 38e73fefeca66efffb6ce67a3e38d8a0dc54c145
         }).then(res => res.json())
         .then((response) => {
             setAccountExists(response.emailExists);
@@ -26,7 +38,10 @@ function Register() {
 
     return (
         <div>
-            <h1>Coronattack Register</h1>
+            <h1 className="titleLogin">Register</h1>
+            <div className="imgReg">
+                <img src={smileygmtrans} alt="regImg"/>
+            </div>
             {accountExists && <h1 style={{color: "red"}}>This E-Mail adress is already registered</h1>}
             <form onSubmit={handleSubmit}>
                 <div>
@@ -72,10 +87,10 @@ function Register() {
                     />
                 </div>
                 <div>
-                    <input type="submit" value="Register" />
+                    <input type="submit" value="Register" className="buttonNext" />
                 </div>
-
-                <Link to="/login">Already registered? Login here</Link>
+                <br />
+                <Link to="/login" className="registerBtn">Already registered? Login here</Link>
             </form>
         </div>
     )

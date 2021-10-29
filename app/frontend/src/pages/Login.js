@@ -1,7 +1,9 @@
 import { React, useState } from 'react';
 import { Link } from "react-router-dom";
+import '../styles/LogRegStyle.css';
+import illVirus from '../images/illVirus.png';
 
-function Login() {
+function Login(props) {
 
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
@@ -13,19 +15,22 @@ function Login() {
 
         fetch('http://localhost:3001/users/login', {
             method: 'POST',
-            headers: { "Content-Type": "application/json" },
+            headers: { "Content-Type": "application/json",
+        'Accept': 'application/json' },
             body: JSON.stringify(data)
         })
-            .then(res => res.json())
+            .then(res => res.test())
             .then((response) => {
                 setPasswordIsCorrect(response.passwordIsCorrect);
+                props.setPlayerA(response.username);
             })
     }
 
 
     return (
         <div>
-            <h1>Coronattack Login</h1>
+            <h1 className="titleLogin">Login</h1>
+            <img src={illVirus} alt="loginImage"/>
             <form onSubmit={handleSubmit}>
                 <div>
                     <input
@@ -50,14 +55,15 @@ function Login() {
                     />
                 </div>
                 <div>
-                    {!passwordIsCorrect && <input type="submit" value="Login" />}
+                    {!passwordIsCorrect && <input type="submit" value="Login" className="buttonNext" />}
                 </div>
-                <div style={{padding: 30}}>
-                    {passwordIsCorrect && <Link to="/Dashboard" style={{ color: "red", fontSize: 20, borderStyle: 'solid', margin: 10 }}>Click here to log into the game</Link>}
+                <div>
+                    <br />
+                    {passwordIsCorrect && <Link to="/Dashboard" className="buttonNext" >Click here to log into the game</Link>}
                 </div>
                 <br />
 
-                {!passwordIsCorrect && <Link to="/register">Register</Link>}
+                {!passwordIsCorrect && <Link to="/register" className="registerBtn">Register</Link>}
             </form>
         </div>
     )
