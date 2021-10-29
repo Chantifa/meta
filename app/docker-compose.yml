@@ -21,14 +21,12 @@ services:
     build: ./frontend/
     volumes:
       - ./frontend:/frontend
-      - node_modules:/fontend/node_modules
+      - node_modules:/frontend/node_modules
     environment:
       NODE_ENV: production
     ports:
       - 3000:3000
-    depends_on: 
-    - backend
-
+    
   storage:
     container_name: storage
     build: ./backend/storage

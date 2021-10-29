@@ -1,4 +1,4 @@
-FROM postgres:11
+FROM postgres:latest
 # Custom initialization scripts
 ADD  ddl.sql /docker-entrypoint-initdb.d
 COPY init.sh /docker-entrypoint-initdb.d/init.sh
