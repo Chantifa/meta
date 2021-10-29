@@ -16,6 +16,7 @@ function Register() {
         const data = { nickname, email, password, password2 };
         console.log(data);
 
+
         fetch('http://localhost:3001/users/register', {
             method: 'POST',        
             headers: { 'Content-Type': 'application/json',
@@ -23,6 +24,7 @@ function Register() {
                     },
             mode:'cors',
             body: JSON.stringify({data})
+
         }).then(res => res.json())
         .then((response) => {
             setAccountExists(response.emailExists);
