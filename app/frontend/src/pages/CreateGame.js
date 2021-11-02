@@ -4,6 +4,10 @@ import '../styles/CreateGame.css';
 
 function CreateGame(props) {
 
+    // es muss hier eine gameID generiert werden, die auch zum Pfad angefügt wird
+    // zB game1 mit der ID 12345 -> /dashboard/12345
+    // game difficulty -> as state in einem späteren Zeitpunkt
+
     const history = useHistory();
 
     const handleCancel = () => {
