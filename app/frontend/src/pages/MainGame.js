@@ -4,6 +4,21 @@ import '../styles/MainGameStyle.css';
 
 function MainGame(props) {
 
+    //object to send through websockets - gameState
+
+    const [gameState, setGameState] = useState( {
+        scoreA: 0,
+        scoreB: 0,
+        ball: {
+            speed: 50,
+            x: 150,
+            y: 100,
+            directionX: 1,
+            directionY: 1
+        }
+        //paddle A&B & playground here?
+    } )
+
     // eslint-disable-next-line
     const [scoreA, setScoreA] = useState(0);
     // eslint-disable-next-line
@@ -27,8 +42,7 @@ function MainGame(props) {
         width: 2rem;
         height: 4rem;
         left: ${({ x }) => x + 'rem'};
-        top: ${
-            ({ y }) =>  y + 'rem'}
+        top: ${({ y }) =>  y + 'rem'};
     `;
 
     /** 
