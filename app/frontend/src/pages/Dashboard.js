@@ -2,13 +2,12 @@ import { React, useState, useEffect } from 'react';
 import { Link } from "react-router-dom";
 import '../styles/DashboardStyle.css';
 import socketClient from "socket.io-client";
-import { useHistory, useParams } from "react-router-dom";
+import { useHistory } from "react-router-dom";
 const CHAT_SERVER = "http://127.0.0.1:3002/";
 
 function Dashboard() {
 
     const history = useHistory();
-    const { id } = useParams();
 
     const [messages, setMessages] = useState([]);
     const [inputValue, setInputValue] = useState("")

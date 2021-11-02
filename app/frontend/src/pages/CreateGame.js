@@ -16,7 +16,8 @@ function CreateGame(props) {
     }
 
     const handleSubmit = () => {
-        let path = '/maingame'
+        let id = 1234;
+        let path = '/maingame/' + id;
         history.push(path);
     }
 
