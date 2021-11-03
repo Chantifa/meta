@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import '../styles/DashboardStyle.css';
 import socketClient from "socket.io-client";
 import { useHistory } from "react-router-dom";
-const CHAT_SERVER = "http://127.0.0.1:3002/";
+const SERVER = "http://127.0.0.1:3001/";
 
 function Dashboard() {
 
@@ -12,7 +12,7 @@ function Dashboard() {
     const [messages, setMessages] = useState([]);
     const [inputValue, setInputValue] = useState("")
 
-    const socket = socketClient(CHAT_SERVER);
+    const socket = socketClient(SERVER);
 
     const loadMessages = async () => {
 
