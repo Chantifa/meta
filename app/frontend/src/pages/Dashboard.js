@@ -12,11 +12,11 @@ function Dashboard() {
     const [messages, setMessages] = useState([]);
     const [inputValue, setInputValue] = useState("")
 
-    const socket = socketClient(SERVER);
+    const io = socketClient(SERVER);
 
     const loadMessages = async () => {
 
-        socket.on('chat message', function (msg) {
+        io.on('chat message send from backend', function (msg) {
             const newMessageArray = [...messages];
             newMessageArray.push(msg);
             setMessages(newMessageArray);
@@ -32,7 +32,7 @@ function Dashboard() {
     const handleSubmit = (e) => {
         e.preventDefault();
         //save input field to 'chat message' and send it to server
-        socket.emit('chat message', inputValue);
+        io.emit('chat message send from frontend', inputValue);
         setInputValue("");
     }
 

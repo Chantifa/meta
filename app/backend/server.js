@@ -100,11 +100,8 @@ const io = new Server(server);
 // socket object -> to send messages to client
 io.on('connection', (socket) => {
 
-    //console.log('a user connected');
-    //console.log(socket);
-
-    socket.on('chat message', (msg) => {
-        io.emit('chat message', msg);
+    socket.on('chat message send from frontend', (msg) => {
+        io.emit('chat message send from backend', msg);
         //console.log("takes the message from the frontend input field and saves it to 'msg' var via 'chat message' --> ", msg);
     });
 });
