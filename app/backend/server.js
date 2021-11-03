@@ -4,19 +4,23 @@ const { pool } = require('./dbConfig.js');
 const bcrypt = require('bcrypt');
 
 // Middleware
-//var bodyParser = require('body-parser');
-//app.use(bodyParser.urlencoded({ extended: false }));
-//app.use(bodyParser.json());
+var bodyParser = require('body-parser');
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.json());
 
 app.use(express.urlencoded({ extended: false}));
 app.use(express.json());
-app.use(function(req, res, next) {
-    res.header("Access-Control-Allow-Origin", "*");
-    res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
-   next();
-});
 const cors = require("cors");
 app.use(cors( ));
+
+
+app.use(function(req, res, next) {
+    res.header("Access-Control-Allow-Origin", "*");
+    res.header("Access-Control-Allow-Headers", "X-Requested-With");
+    res.header("Access-Control-Allow-Headers", "Content-Type");
+    res.header("Access-Control-Allow-Methods", "PUT, GET, POST, DELETE, OPTIONS");
+    next();
+});
 
 const PORT = process.env.PORT || 3001;
 
@@ -26,7 +30,7 @@ app.get('/', (req, res) => {
     res.send("Hello from backend!");
 });
 
-app.post('/users/register', async (req, res) => {
+app.post('http://localhost:3001/users/register', async (req, res) => {
     
 
     let { nickname, email, password } = req.body;
@@ -64,12 +68,10 @@ app.post('/users/register', async (req, res) => {
             }
         }
     );
-
-
 });
 
 // handle POST from LOGIN page
-app.post('/users/login', async (req, res) => {
+app.post('http://localhost:3001/users/login', async (req, res) => {
 
     let { name, email, password } = req.body;
 
@@ -107,7 +109,7 @@ app.post('/users/login', async (req, res) => {
 
 const http = require('http');
 const server = http.createServer(app);
-const { Server } = require("socket.io");
+const {Server} = require("socket.io");
 const io = new Server(server);
 
 const PORT_CHAT = 3002;

@@ -18,12 +18,8 @@ function Register() {
 
 
         fetch('http://localhost:3001/users/register', {
-            method: 'POST',        
-            headers: { 'Content-Type': 'application/json',
-            'Accept':'application/json'
-                    },
-            mode:'cors',
-            body: JSON.stringify({data})
+            method: 'POST', // *GET, POST, PUT, DELETE, etc.
+            body: JSON.stringify(data) // body data type must match "Content-Type" header
 
         }).then(res => res.json())
         .then((response) => {
