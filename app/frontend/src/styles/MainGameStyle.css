@@ -1,12 +1,3 @@
-#pongBoard {
-    margin: 0;
-    padding: 0;
-    height: 100%;
-    width: 100%;
-    overflow: hidden;
-    background-color: rgb(112, 65, 108);
-  }
-
 canvas {
   padding: 0;
   margin: auto;

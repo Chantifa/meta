@@ -40,7 +40,7 @@ class App extends Component {
   // draw everything on screen
   drawAll = (ctx) => {
     // screen
-    ctx.fillStyle = "#333";
+    ctx.fillStyle = "#661177";
     ctx.fillRect(0, 0, this.Width, this.Height);
     // middle dashed line
     ctx.strokeStyle = "#fff";
