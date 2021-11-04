@@ -16,10 +16,13 @@ function CreateGame(props) {
     }
 
     const handleSubmit = () => {
+        //TODO: create a unique id for every game
         let id = 1234;
         let path = '/maingame/' + id;
         history.push(path);
     }
+
+    //TODO: according to the difficulty button, set the correct ball speed
 
     return (
         <div style={{ color: "white" }}>
