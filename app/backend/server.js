@@ -100,10 +100,12 @@ const io = new Server(server);
 // socket object -> to send messages to client
 io.on('connection', (socket) => {
 
-    socket.on('chat message send from frontend', (msg) => {
-        io.emit('chat message send from backend', msg);
+    // on to receive from the room with string, emit to send to this room
+    socket.on('chat from frontend', (msg) => {
+        io.emit('chat from backend', msg);
         //console.log("takes the message from the frontend input field and saves it to 'msg' var via 'chat message' --> ", msg);
     });
+
 });
 
 const WEBSOCKET_PORT = 3001;

@@ -16,7 +16,8 @@ function Dashboard() {
 
     const loadMessages = async () => {
 
-        io.on('chat message send from backend', function (msg) {
+        // receive chat messages with .on (from chat room)
+        io.on('chat from backend', (msg) => {
             const newMessageArray = [...messages];
             newMessageArray.push(msg);
             setMessages(newMessageArray);
@@ -31,9 +32,11 @@ function Dashboard() {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        //save input field to 'chat message' and send it to server
-        io.emit('chat message send from frontend', inputValue);
-        setInputValue("");
+        //save input field to 'inputValue and send it to server using the room chat from frontend
+        if(inputValue) {
+            io.emit('chat from frontend', inputValue);
+            setInputValue("");
+        }
     }
 
     const handleCreate = () => {
@@ -69,6 +72,7 @@ function Dashboard() {
                     {messages.map((message, index) => {
                         return <div key={index} className="liMessage">{message}</div>
                     })}
+
                 </ul>
             </div>
 
@@ -77,3 +81,4 @@ function Dashboard() {
 }
 
 export default Dashboard
+
