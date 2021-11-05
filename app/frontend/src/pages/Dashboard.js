@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import '../styles/DashboardStyle.css';
 import socketClient from "socket.io-client";
 import { useHistory } from "react-router-dom";
-const CHAT_SERVER = "http://127.0.0.1:3002/";
+const SERVER = "http://127.0.0.1:3001/";
 
 function Dashboard() {
 
@@ -12,11 +12,12 @@ function Dashboard() {
     const [messages, setMessages] = useState([]);
     const [inputValue, setInputValue] = useState("")
 
-    const socket = socketClient(CHAT_SERVER);
+    const io = socketClient(SERVER);
 
     const loadMessages = async () => {
 
-        socket.on('chat message', function (msg) {
+        // receive chat messages with .on (from chat room)
+        io.on('chat from backend', (msg) => {
             const newMessageArray = [...messages];
             newMessageArray.push(msg);
             setMessages(newMessageArray);
@@ -31,9 +32,11 @@ function Dashboard() {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        //save input field to 'chat message' and send it to server
-        socket.emit('chat message', inputValue);
-        setInputValue("");
+        //save input field to 'inputValue and send it to server using the room chat from frontend
+        if(inputValue) {
+            io.emit('chat from frontend', inputValue);
+            setInputValue("");
+        }
     }
 
     const handleCreate = () => {
@@ -69,6 +72,7 @@ function Dashboard() {
                     {messages.map((message, index) => {
                         return <div key={index} className="liMessage">{message}</div>
                     })}
+
                 </ul>
             </div>
 
@@ -77,3 +81,4 @@ function Dashboard() {
 }
 
 export default Dashboard
+

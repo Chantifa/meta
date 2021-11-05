@@ -10,6 +10,7 @@ import Register from '../pages/Register.js';
 import Dashboard from '../pages/Dashboard.js';
 import CreateGame from "../pages/CreateGame.js";
 import MainGame from "../pages/MainGame.js";
+import Notfound from "../pages/Notfound.js";
 
 function RoutingLogic() {
 
@@ -32,6 +33,10 @@ function RoutingLogic() {
                 <Route path="/maingame" render={(props) => (
                     <MainGame {...props} gameName={gameName} playerA={playerA} />
                 )} />
+                <Route path="/maingame/:id" render={(props) => (
+                    <MainGame {...props} gameName={gameName} playerA={playerA} />
+                )} />
+                <Route path="*" component={Notfound} status={404} />
             </Switch>
         </Router>
     )
