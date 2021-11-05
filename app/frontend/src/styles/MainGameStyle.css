@@ -1,82 +1,43 @@
-.game{
-    position: relative;
-    width   : 1200px;
-    height  : 600px;
+canvas {
+  padding: 0;
+  margin: auto;
+  display: block;
 }
 
-.playground{
-    background-color: rgb(10, 46, 34);
-    position       : absolute;
-    background-size: contain;
-    width          : 100%;
-    height         : 100%;
-    top            : 0;
-    left           : 0;
-    overflow       : hidden;
-    cursor         : pointer;
+.buttons {
+  position: fixed;
+  bottom: 5px;
+  background: rgba(0, 0, 0, 0);
+  color: white;
+  font-family: "Roboto Mono", sans-serif;
+  border-radius: 4px;
+  border: 1px solid #fff;
+  text-align: center;
+  opacity: 0.6;
 }
 
-.paddle-hand-right{
-    background-color: blue;
-    background-size: contain;
-    width          : 30px;
-    height         : 100%;
-    position       : absolute;
-    top            : 0;
-    right: 50px;
+.buttonLeft {
+  left: 10px;
+  width: 30px;
 }
 
-.paddle-hand-left{
-    background-color: red;
-    background-size: contain;
-    width          : 30px;
-    height         : 100%;
-    position       : absolute;
-    top            : 0;
-    left: 50px;
+#buttonS {
+  left: 50px;
 }
 
-.paddleA {
-    background-color: rgb(0, 0, 0);
-    background-size: contain;
-    top            : 70px;
-    left            : 50px;
-    position       : absolute;
-    width          : 30px;
-    height         : 70px;
+.buttonRight {
+  right: 10px;
+  padding: 0 5px;
 }
 
-.paddleB {
-    background-color: black;
-    background-size: contain;
-    top            : 70px;
-    right           : 50px;
-    position       : absolute;
-    width          : 30px;
-    height         : 70px;
+#buttonUp {
+  right: 65px;
 }
 
-.ball {
-    background   : #fbb;
-    /*background: url('../images/illVirus.png');*/
-    position     : absolute;
-    width        : 20px;
-    height       : 20px;
-    left         : 150px;
-    top          : 100px;
-    border-radius: 10px;
-}
-
-.scoreboard{
-    background-color: rgb(89, 149, 228);
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    padding: 5px;
-    color: lightgrey;
-}
-
-.score{
-    background-color: black;
+button {
+  right: 0;
+  left: 0;
+  width: 100px;
+  height: 45px;
+  margin: 0 auto;
 }
