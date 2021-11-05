@@ -16,8 +16,9 @@ function Login(props) {
         fetch('http://localhost:3001/users/login', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json',
-                        'Accept': 'application/json' },
-            body: JSON.stringify(data)
+                        'Accept': 'application/json' ,
+                    'Access-Control-Allow-Origin':'*'},
+            body: JSON.parse(data)
         })
             .then(res => res.json())
             .then((response) => {
