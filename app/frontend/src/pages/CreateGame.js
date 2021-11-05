@@ -4,6 +4,10 @@ import '../styles/CreateGame.css';
 
 function CreateGame(props) {
 
+    // es muss hier eine gameID generiert werden, die auch zum Pfad angefügt wird
+    // zB game1 mit der ID 12345 -> /dashboard/12345
+    // game difficulty -> as state in einem späteren Zeitpunkt
+
     const history = useHistory();
 
     const handleCancel = () => {
@@ -12,9 +16,13 @@ function CreateGame(props) {
     }
 
     const handleSubmit = () => {
-        let path = '/maingame'
+        //TODO: create a unique id for every game
+        let id = 1234;
+        let path = '/maingame/' + id;
         history.push(path);
     }
+
+    //TODO: according to the difficulty button, set the correct ball speed
 
     return (
         <div style={{ color: "white" }}>

@@ -14,7 +14,7 @@ app.use(cors( ));
 
 
 
-const PORT = process.env.PORT || 3001;
+//const PORT = process.env.PORT || 3001;
 
 
 // test backend :3001 working
@@ -104,7 +104,6 @@ const server = http.createServer(app);
 const {Server} = require("socket.io");
 const io = new Server(server);
 
-
 const PORT_CHAT = 3002;
 
 // CHAT LISTEN PORT
@@ -115,15 +114,21 @@ server.listen(PORT_CHAT, () => {
 // socket object -> to send messages to client
 io.on('connection', (socket) => {
 
-    socket.on('chat message', (msg) => {
-        io.emit('chat message', msg);
+    // on to receive from the room with string, emit to send to this room
+    socket.on('chat from frontend', (msg) => {
+        io.emit('chat from backend', msg);
         //console.log("takes the message from the frontend input field and saves it to 'msg' var via 'chat message' --> ", msg);
     });
+
 });
 
-// chat end #######################################################
+const WEBSOCKET_PORT = 3001;
 
 // listen port
 app.listen(PORT, () => {
     console.log(`backend runs on port ${PORT}`);
+});
+// CHAT LISTEN PORT
+server.listen(WEBSOCKET_PORT, () => {
+    console.log(`Backend Server runs on port ${WEBSOCKET_PORT}`);
 });
