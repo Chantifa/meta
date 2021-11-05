@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import '../styles/MainGameStyle.css';
 
-class App extends Component {
+class MainGame extends Component {
     constructor(props) {
         super(props)
         this.gameWidth = document.documentElement.clientWidth;
@@ -260,5 +260,5 @@ class App extends Component {
     }
 }
 
-export default App;
+export default MainGame;
 
