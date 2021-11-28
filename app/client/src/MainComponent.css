@@ -1,0 +1,17 @@
+.title{
+    font-weight: bold;
+}
+
+.userValues{
+    margin-top: 20px;
+    background: yellow;
+}
+
+.userValue{
+     margin-top: 10px;
+     border-top: 1px dashed black;
+}
+
+.form{
+    margin-top: 20px;
+}

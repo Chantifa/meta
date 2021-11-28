@@ -1,0 +1,23 @@
+{
+  "name": "coronattack_server",
+  "version": "1.0.0",
+  "description": "Das Spiel Coronattack wird im Modul WebE entwickelt.",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon",
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://git.ffhs.ch/chantale.gihara/coronattack.git"
+  },
+  "author": "Chantale Gihara & Theologos Baxevanos",
+  "license": "ISC",
+  "dependencies": {
+    "express": "4.17.1",
+    "pg": "8.7.1",
+    "cors": "2.8.5",
+    "nodemon": "2.0.15",
+    "body-parser": "*"
+  }
+}
