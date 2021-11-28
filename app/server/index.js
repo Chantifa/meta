@@ -21,9 +21,29 @@ const pgClient = new Pool({
 
 pgClient.on("connect", client => {
     client  
-        .query("CREATE TABLE IF NOT EXISTS users (id BIGSERIAL NOT NULL, name VARCHAR(200) NOT NULL, email VARCHAR(200) NOT NULL, password VARCHAR(200) NOT NULL, PRIMARY KEY (id), UNIQUE (email))")
+        .query( `SELECT * FROM users
+        WHERE email = $1`,
+    [email],
+    (err, results) => {
+        if (err) {
+            console.log(err);
+        }
+        // if results.rows.length > 0  -----> account already exists
+        if (results.rows.length > 0) {
+            res.send({ emailExists: true })
+            .catch(err => console.log("PG ERROR", err));
+        } 
+        else{
+          // if the e-mail does not already exist in the db, we can add a new user to the db
+          query(
+              `INSERT INTO users (name, email, password)
+              VALUES ($1, $2, $3)
+              RETURNING id, name, email,  password`,
+              [nickname, email, hashedPassword]
+              )// these are the values $1 $2 $3, we give them names)
         .catch(err => console.log("PG Error", err));
-});
+      }
+})});
 
 //Express route definitions
 app.get("/", (req, res) => {

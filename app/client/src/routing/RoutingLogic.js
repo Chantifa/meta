@@ -1,7 +1,7 @@
 import { React, useState } from "react";
 import {
     BrowserRouter as Router,
-    Switch,
+    Routes,
     Route,
 } from "react-router-dom";
 import Home from '../pages/Home.js';
@@ -19,7 +19,7 @@ function RoutingLogic() {
 
     return (
         <Router>
-            <Switch>
+            <Routes>
                 <Route exact path="/" component={Home}></Route>
                 <Route path="/dashboard" component={Dashboard}></Route>
                 <Route path="/register" component={Register}></Route>
@@ -37,7 +37,7 @@ function RoutingLogic() {
                     <MainGame {...props} gameName={gameName} playerA={playerA} />
                 )} />
                 <Route path="*" component={Notfound} status={404} />
-            </Switch>
+            </Routes>
         </Router>
     )
 }

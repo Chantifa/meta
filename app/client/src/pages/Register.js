@@ -1,10 +1,10 @@
-import { React, useState } from 'react';
 import { Link } from "react-router-dom";
 import '../styles/LogRegStyle.css';
 import smileygmtrans from '../images/smileygmtrans.png';
 import axios from 'axios';
+import {React, useCallback, useState, useEffect } from "react";
 
-function Register() {
+const Register = () => {
 
     const [nickname, setnickname] = useState("");
     const [email, setemail] = useState("");
@@ -12,23 +12,36 @@ function Register() {
     const [password2, setpassword2] = useState("");
     const [accountExists, setAccountExists] = useState(false);
 
-    const handleSubmit = (e) => {
-        e.preventDefault();
+    const getAllValues = useCallback(async () => {
+        // we will use nginx to redirect it to the proper URL
+        const userData = await axios.get("/api/users/register");
+        setValues(userData.data.rows.map(row => [row.nickname, row.email, row.password, row.password2]));
+    }, []);
+
+    const saveUser = useCallback(
+        async e => {
+            e.preventDefault();
+            await axios.post("/api/users/register", {
+                    nickname,
+                    email,
+                    password
+            });
+            
+                setnickname("");
+                setemail("");
+                setpassword("");
+                getAllValues();
+            },
+            [nickname,email, password, getAllValues]
+        );
+    
+        useEffect(() => {
+            getAllValues();
+            // eslint-disable-next-line
+          }, []);
+    
         const data = { nickname, email, password, password2 };
         console.log(data);
-
-        axios.post('http://localhost:3001/users/register', {
-            method: 'POST',
-            mode:'cors',
-            headers: { "Content-Type": "application/json",
-            "Access-Control-Allow-Origin": "*"
-         },
-            body: JSON.stringify(data)
-        }).then(res => res.json())
-        .then((response) => {
-            setAccountExists(response.emailExists);
-        })
-    }
 
     return (
         <div>
@@ -37,7 +50,7 @@ function Register() {
                 <img src={smileygmtrans} alt="regImg"/>
             </div>
             {accountExists && <h1 style={{color: "red"}}>This E-Mail adress is already registered</h1>}
-            <form onSubmit={handleSubmit}>
+            <form onSubmit={saveUser}>
                 <div>
                     <input 
                     type="text" 
@@ -87,7 +100,7 @@ function Register() {
                 <Link to="/login" className="registerBtn">Already registered? Login here</Link>
             </form>
         </div>
-    )
-}
+  );
+};
 
 export default Register;

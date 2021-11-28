@@ -1,5 +1,5 @@
 import React from 'react';
-import { useHistory } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import '../styles/CreateGame.css';
 
 function CreateGame(props) {
@@ -8,7 +8,7 @@ function CreateGame(props) {
     // zB game1 mit der ID 12345 -> /dashboard/12345
     // game difficulty -> as state in einem späteren Zeitpunkt
 
-    const history = useHistory();
+    const history = useNavigate();
 
     const handleCancel = () => {
         let path = '/dashboard';
