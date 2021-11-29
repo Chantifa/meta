@@ -1,7 +1,8 @@
 version: "3"
+
 services:
-  postgres:
-    image: "postgres:latest"
+  storage:
+    container_name: storage
     build: ./storage
     volumes:
       - postgres-volume:/var/lib/postgresql/data
@@ -9,53 +10,11 @@ services:
       POSTGRES_USER: postgres
       POSTGRES_PASSWORD: secret
       POSTGRES_DB: coronattack
-    restart: always
     ports:
       - 5432:5432
-
-  nginx:
-    depends_on:
-      - api
-      - client
     restart: always
-    build:
-      dockerfile: Dockerfile.dev
-      context: ./nginx
-    ports:
-      - "3050:80"
-  api:
-    build:
-      dockerfile: Dockerfile.dev
-      context: "./server"
-    volumes:
-      - /app/node_modules
-      - ./server:/app
-    environment:
-      - PGUSER=postgres
-      - PGHOST=postgres
-      - PGDATABASE=postgres
-      - PGPASSWORD=postgres_password
-      - PGPORT=5432
-    ports:
-      - 5000:5000
 
-  client:
-    stdin_open: true
-    environment:
-      - CHOKIDAR_USEPOLLING=true
-    build:
-      dockerfile: Dockerfile.dev
-      context: ./client
-    volumes:
-      - /app/node_modules
-      - ./client:/app
-    ports:
-      - 3000:3000
-
-
-      
 volumes:
   postgres-volume:
-  node_modules:
 
     
