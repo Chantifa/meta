@@ -2,7 +2,7 @@ import { React, useState, useEffect } from 'react';
 import { Link } from "react-router-dom";
 import '../styles/DashboardStyle.css';
 import { useNavigate } from "react-router-dom";
-import { io } from "socket.io-client";
+import { io, Socket } from "socket.io-client";
 const SERVER = "http://127.0.0.1:5000/";
 
 function Dashboard() {

@@ -43,7 +43,8 @@ pgClient.on("connect", client => {
               )// these are the values $1 $2 $3, we give them names)
         .catch(err => console.log("PG Error", err));
       }
-})});
+    })
+});
 
 //Express route definitions
 app.get("/", (req, res) => {
@@ -70,3 +71,18 @@ app.post("/users/register", async(req, res) => {
 app.listen(5000, err => {
   console.log("Listening");
 });
+
+const { createServer } = require("http");
+const httpServer = createServer(app);
+const { Server } = require("socket.io");
+const io = new Server(httpServer, { /* options */ });
+
+io.on("connection", (socket) => {
+   // on to receive from the room with string, emit to send to this room
+   socket.on('chat from frontend', (msg) => {
+    io.emit('chat from backend', msg);
+    //console.log("takes the message from the frontend input field and saves it to 'msg' var via 'chat message' --> ", msg);
+})
+});
+
+httpServer.listen(3000);
