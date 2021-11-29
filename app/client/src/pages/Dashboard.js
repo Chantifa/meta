@@ -2,7 +2,7 @@ import { React, useState, useEffect } from 'react';
 import { Link } from "react-router-dom";
 import '../styles/DashboardStyle.css';
 import { useNavigate } from "react-router-dom";
-import { io, Socket } from "socket.io-client";
+import { io } from "socket.io-client";
 const SERVER = "http://127.0.0.1:5000/";
 
 function Dashboard() {
@@ -17,7 +17,7 @@ function Dashboard() {
     const loadMessages = async () => {
 
         // receive chat messages with .on (from chat room)
-        socket.on('chat from backend', (msg) => {
+        socket.on('chat from server', (msg) => {
             const newMessageArray = [...messages];
             newMessageArray.push(msg);
             setMessages(newMessageArray);
@@ -34,7 +34,7 @@ function Dashboard() {
         e.preventDefault();
         //save input field to 'inputValue and send it to server using the room chat from frontend
         if(inputValue) {
-            socket.emit('chat from frontend', inputValue);
+            socket.emit('chat from client', inputValue);
             setInputValue("");
         }
     }

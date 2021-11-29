@@ -12,7 +12,7 @@ function CreateGame(props) {
 
     const handleCancel = () => {
         let path = '/dashboard';
-        history.push(path);
+        history(path);
     }
 
     const handleSubmit = () => {

@@ -1,13 +1,9 @@
 import { React, useState } from "react";
-import {
-    BrowserRouter as Router,
-    Routes,
-    Route,
-} from "react-router-dom";
-import Home from '../pages/Home.js';
-import Login from '../pages/Login.js';
-import Register from '../pages/Register.js';
-import Dashboard from '../pages/Dashboard.js';
+import {  BrowserRouter as Router,Routes, Route} from 'react-router-dom';
+import Home from "../pages/Home.js";
+import Login from "../pages/Login.js";
+import Register from "../pages/Register.js";
+import Dashboard from "../pages/Dashboard.js";
 import CreateGame from "../pages/CreateGame.js";
 import MainGame from "../pages/MainGame.js";
 import Notfound from "../pages/Notfound.js";
@@ -43,3 +39,5 @@ function RoutingLogic() {
 }
 
 export default RoutingLogic;
+
+
