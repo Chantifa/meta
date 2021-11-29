@@ -3,4 +3,5 @@ WORKDIR /app
 COPY ./package.json ./
 RUN npm i
 COPY . .
+RUN chmod +x /server/node_modules/.bin/nodemon
 CMD ["npm", "run", "start"]
