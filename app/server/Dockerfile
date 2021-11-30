@@ -1,7 +1,8 @@
 FROM node:14.14.0-alpine
 WORKDIR /app
 COPY ./package.json ./
+RUN chown -R node:node .
+USER node
 RUN npm i
 COPY . .
-RUN chmod +x /server/node_modules/.bin/nodemon
 CMD ["npm", "run", "start"]
