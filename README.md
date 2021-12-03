@@ -22,7 +22,7 @@ Spiel 2 gegen Spielgegner:
 * Einer Spielt mit «up», «down»
 * Ein anderer Spieler benutzt «S» und «W»
 * Mit einem Paddle muss man den Ball auf die andere Seite zurückspielen. 
-* Wer zuerst 10 Punkte erreicht und 10 Bälle in den Hintergrund getroffen hat, hat gewonnen.
+* Wer zuerst 11 Punkte erreicht und 11 Bälle in den Hintergrund getroffen hat, hat gewonnen.
 
 
 Das Spiel wird auf den Webtechnologien javascript und PostgreSQL erstellt.
