@@ -29,11 +29,24 @@ function About() {
           <FormContent>
             <BlackContainer>
               <Text>
-                bla bla bla bla
-                <br />
-                Have fun playing the game! :)
+              We are two computer science students at the FFHS (Fern Fachhochschule Schweiz) in the 7th semester, in which we
+              complete the "web engineering" module. In this module we should develop a multiplayer game with a chat function.
+              We decided on the game "Meta", which is based on a ping-pong game.
+              <br />
+              The name "Meta" was inspired from the new name of the facebook combany "Metaverse", which comes from the Greek prefix 
+              and preposition meta, which means "after" or "beyond. That's why we focused on also developing a modern site.
+              <br />
+              It is a dual player game and can be played on different levels of difficulty (ball of different speeds).
+              <br />
+              Meta is one of the first “Pong” computer games ever to be developed.
+              <br />
+              This simple "tennis-like" game features two rackets and a ball.
+              <br />
+              The goal is to defeat your opponent by being the first to win 10 points.
+              A player gets a point as soon as the opponent misses a ball.
+              The game can be played with two human players or one player against a computer controlled paddle.
+              Have fun playing the game! :)
               </Text>
-              Î
             </BlackContainer>
           </FormContent>
         </FormWrap>
