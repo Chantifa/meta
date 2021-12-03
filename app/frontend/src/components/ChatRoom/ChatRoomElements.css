@@ -15,11 +15,11 @@
     margin-bottom: 40px;
   }
   
-  button {
-    margin-top: 20px;
-    padding: 10px;
+  .buttonChat {
+    margin: 30px;
     background: transparent;
     border-radius: 5px;
+    
   }
   
   .render-chat {
@@ -27,4 +27,8 @@
     border-radius: 5px;
     padding: 20px;
     box-shadow: 0px 3px 24px -8px rgba(0, 0, 0, 0.75);
+  }
+
+  .head{
+    margin: 20px;
   }

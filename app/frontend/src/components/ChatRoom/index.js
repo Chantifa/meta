@@ -58,12 +58,13 @@ function ChatRoom() {
     <div>
       <div className="card">
       <form onSubmit={onMessageSubmit} className="chatForm">
-        <h1>Messenger</h1>
+        <h1 className="head">Messenger</h1>
         <div className="name-field">
           <TextField
             name="name"
             onChange={(e) => onTextChange(e)}
             value={state.name}
+            variant="outlined"
             label="Name"
           />
         </div>
@@ -77,10 +78,10 @@ function ChatRoom() {
             label="Message"
           />
         </div>
-        <button>Send Message</button>
+        <button className="buttonChat">Send Message</button>
       </form>
       <div className="render-chat">
-        <h1>Chat Log</h1>
+        <h1 className="head">Chat Log</h1>
         {renderChat()}
       </div>
     </div>
