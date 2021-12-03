@@ -28,6 +28,13 @@ function Register() {
       .then((response) => {
         setAccountExists(response.emailExists);
         setRegistered(response.registered);
+
+        if(response.emailExists){
+          setnickname("");
+          setemail("");
+          setpassword("");
+          setpassword2("");
+        }
       });
   };
 
