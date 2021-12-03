@@ -10,11 +10,7 @@ export const Container = styled.div`
   top: 0;
   z-index: 0;
   overflow: hidden;
-  background: linear-gradient(
-    108deg,
-    rgba(1, 147, 86, 1) 0%,
-    rgba(10, 201, 122, 1) 100%
-  );
+  background: #25b3ac;
 `;
 
 export const FormWrap = styled.div`
@@ -84,7 +80,7 @@ export const BackButton = styled(LinkRouter)`
   background: #000;
   padding: 10px;
   border-radius: 4px;
-  color: #01bf71;
+  color: #25b3ac;
   font-size: 20px;
   cursor: pointer;
   text-align: center;

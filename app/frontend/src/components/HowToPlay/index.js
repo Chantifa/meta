@@ -5,7 +5,6 @@ import SilentNavbar from "../SilentNavbar/index.js";
 import {
   Container,
   FormWrap,
-  Icon,
   FormContent,
   BlackContainer,
   Text,
@@ -26,7 +25,7 @@ function HowToPlay() {
       <SilentNavbar toggle={toggle} />
       <Container>
         <FormWrap>
-          <Icon>Meta Ping Pong Tutorial</Icon>
+          <h1 style={{color:"white", margin:20}}>Meta Ping Pong Tutorial</h1>
           <FormContent>
             <BlackContainer>
               <Text>
