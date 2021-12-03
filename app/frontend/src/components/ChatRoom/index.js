@@ -4,8 +4,9 @@ import { Link as LinkRouter } from "react-router-dom";
 import React, { useEffect, useRef, useState } from "react";
 import io from "socket.io-client";
 import "./ChatRoomElements.css";
-import Navbar from "../Navbar";
 import Footer from "../Footer";
+import Sidebar from "../Sidebar";
+import SilentNavbar from "../SilentNavbar/index.js";
 
 const BackButton = styled(LinkRouter)`
 background: #000;
@@ -54,11 +55,18 @@ function ChatRoom() {
     ));
   };
 
+  const [isOpen, setIsOpen] = useState(false);
+
+  const toggle = () => {
+    setIsOpen(!isOpen);
+    console.log("ISOPEN---> ", isOpen);
+  };
 
 
   return (
     <div>
-      <Navbar />
+      <Sidebar isOpen={isOpen} toggle={toggle} />
+      <SilentNavbar toggle={toggle} />
       <div className="card">
       <form onSubmit={onMessageSubmit} className="chatForm">
         <h1 className="head">Messenger</h1>

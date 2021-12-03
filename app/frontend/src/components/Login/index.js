@@ -1,7 +1,8 @@
 import { React, useState } from "react";
 import { Link } from "react-router-dom";
 import "./LoginElements.css";
-import Navbar from "../Navbar";
+import Sidebar from "../Sidebar";
+import SilentNavbar from "../SilentNavbar/index.js";
 import Footer from "../Footer";
 
 function Login(props) {
@@ -26,9 +27,17 @@ function Login(props) {
       });
   };
 
+  const [isOpen, setIsOpen] = useState(false);
+
+  const toggle = () => {
+    setIsOpen(!isOpen);
+    console.log("ISOPEN---> ", isOpen);
+  };
+
   return (
     <div>
-      <Navbar />
+      <Sidebar isOpen={isOpen} toggle={toggle} />
+      <SilentNavbar toggle={toggle} />
       <h1 className="titleLogin">Login</h1>
       <form onSubmit={handleSubmit} className="formLogin">
         <div>

@@ -1,13 +1,22 @@
-import React from "react";
+import React, { useState } from "react";
 import "./CreateGameElements.css";
-import Navbar from "../Navbar";
+import Sidebar from "../Sidebar";
+import SilentNavbar from "../SilentNavbar/index.js";
 import Footer from "../Footer";
 import { Link } from "react-router-dom";
 
 function CreateGame(props) {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const toggle = () => {
+    setIsOpen(!isOpen);
+    console.log("ISOPEN---> ", isOpen);
+  };
+
   return (
     <div style={{ color: "#25b3ac" }}>
-      <Navbar />
+      <Sidebar isOpen={isOpen} toggle={toggle} />
+      <SilentNavbar toggle={toggle} />
       <h1 className="titleCreateGame">Create Game </h1>
 
       <label className="gameName">
