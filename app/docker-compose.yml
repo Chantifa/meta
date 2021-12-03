@@ -1,6 +1,7 @@
 version: "3"
 
 services:
+
   storage:
     image: storage
     container_name: storage
