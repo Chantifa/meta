@@ -4,6 +4,8 @@ import { Link as LinkRouter } from "react-router-dom";
 import React, { useEffect, useRef, useState } from "react";
 import io from "socket.io-client";
 import "./ChatRoomElements.css";
+import Navbar from "../Navbar";
+import Footer from "../Footer";
 
 const BackButton = styled(LinkRouter)`
 background: #000;
@@ -14,7 +16,7 @@ font-size: 20px;
 cursor: pointer;
 text-align: center;
 text-decoration: none;
-margin: 10px;
+margin: 30px;
 `;
 
 function ChatRoom() {
@@ -56,6 +58,7 @@ function ChatRoom() {
 
   return (
     <div>
+      <Navbar />
       <div className="card">
       <form onSubmit={onMessageSubmit} className="chatForm">
         <h1 className="head">Messenger</h1>
@@ -85,7 +88,11 @@ function ChatRoom() {
         {renderChat()}
       </div>
     </div>
+    <div>
       <BackButton to="/"> Back </BackButton>
+    </div>
+    <br />
+      <Footer />
     </div>
   );
 }
