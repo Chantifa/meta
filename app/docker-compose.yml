@@ -1,7 +1,9 @@
 version: "3"
 
 services:
+
   storage:
+    image: storage
     container_name: storage
     build: ./backend/storage
     volumes:
@@ -9,12 +11,10 @@ services:
     environment:
       POSTGRES_USER: postgres
       POSTGRES_PASSWORD: secret
-      POSTGRES_DB: coronattack
+      POSTGRES_DB: meta
     ports:
       - 5432:5432
     restart: always
 
 volumes:
   postgres-volume:
-
-
