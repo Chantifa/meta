@@ -29,7 +29,7 @@ export const NavbarContainer = styled.div`
 `;
 
 export const NavbarLogo = styled(LinkRouter)`
-  color: #01bf71;
+  color: #25b3ac;
   justify-self: flex-start;
   cursor: pointer;
   font-size: 1.5rem;

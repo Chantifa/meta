@@ -10,11 +10,7 @@ export const Container = styled.div`
   top: 0;
   z-index: 0;
   overflow: hidden;
-  background: linear-gradient(
-    108deg,
-    rgba(1, 147, 86, 1) 0%,
-    rgba(10, 201, 122, 1) 100%
-  );
+  background: #25b3ac;
 `;
 
 export const FormWrap = styled.div`
@@ -25,21 +21,6 @@ export const FormWrap = styled.div`
 
   @media screen and (max-width: 400px) {
     height: 80%;
-  }
-`;
-
-export const Icon = styled(LinkRouter)`
-  margin-left: 32px;
-  margin-top: 32px;
-  text-decoration: none;
-  color: #fff;
-  font-weight: 700;
-  font-size: 32px;
-  padding: 1em;
-
-  @media screen and (max-width: 480px) {
-    margin-left: 16px;
-    margin-top: 8px;
   }
 `;
 
@@ -55,7 +36,7 @@ export const FormContent = styled.div`
 `;
 
 export const BlackContainer = styled.div`
-  background: #010101;
+  background: #000;
   max-width: 400px;
   height: auto;
   width: 100%;
