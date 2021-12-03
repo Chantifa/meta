@@ -1,25 +1,35 @@
-# Coronattack
+# Meta Ping Poing
 
-Das Spiel Coronattack wird im Modul WebE entwickelt. 
+Das Spiel Meta Ping Pong wird im Modul WebE entwickelt. 
 
 Das Spiel basiert auf ein PingPong-Spiel. Es ist ein Dualplayer - Spiel und kann auf verschiedenen Schwierigkeitsgrad (schneller Ball) gespielt werden. 
 
-* Es gibt zwei Modis: 
+Es gibt zwei Modis: 
+1) Spieler gegen Computer
+2) Spieler gegen Spieler
 
 # Ziele des Spieles
 
-Es muss ein Spiel eröffnet werden oder beigetreten werden. Welcher die Anfrage erhält, kann entweder 
-Rejecten oder akzeptieren. Wenn alle Spieler beigetreten sind kann das erste Spiel gestartet werden.
+Spiel 1 gegen Computer:
 
-1) mit dem Virus (Ball) müssen die Menschen des Gegenspielers getroffen werden
-2) mit der Impfung (Ball) müssen die Menschen wieder genesen werden.
+* Dabei spielt man gegen eine fiktiven Spielgegner der Computer. 
+* Mit einem Paddle muss man den Ball auf die andere Seite zurückspielen. 
+* Wer zuerst 10 Punkte erreicht und 10 Bälle in den Hintergrund getroffen hat, hat gewonnen.
 
-![Skizze Coronattack](app/frontend/src/img/Skizze.png)
+Spiel 2 gegen Spielgegner:
+
+* Dabei müssen die Spielgegner mit dem Ball in den Hintergrund spielen. 
+* Einer Spielt mit «up», «down»
+* Ein anderer Spieler benutzt «S» und «W»
+* Mit einem Paddle muss man den Ball auf die andere Seite zurückspielen. 
+* Wer zuerst 10 Punkte erreicht und 10 Bälle in den Hintergrund getroffen hat, hat gewonnen.
+
 
 Das Spiel wird auf den Webtechnologien javascript und PostgreSQL erstellt.
 
 Framework Frontend:
 - React
+
 Framework Backend:
 - Express, nodejs
 
