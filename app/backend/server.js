@@ -43,7 +43,7 @@ router.post('/users/register', jsonParser, async (req, res) => {
           }
           // if results.rows.length > 0  -----> account already exists
           if (results.rows.length > 0) {
-              res.send({ emailExists: true })
+              res.send({ emailExists: true, registered: false })
           } else {
               // if the e-mail does not already exist in the db, we can add a new user to the db
               pool.query(
@@ -57,6 +57,7 @@ router.post('/users/register', jsonParser, async (req, res) => {
                       }
                   }
               );
+              res.send( { registered: true } )
           }
       }
   );
