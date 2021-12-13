@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 import "./RegisterElements.css";
 import Navbar from "../Navbar";
 import Footer from "../Footer";
-//import axios from 'axios';
 
 function Register() {
   const [nickname, setnickname] = useState("");

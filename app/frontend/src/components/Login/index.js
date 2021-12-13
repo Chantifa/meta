@@ -8,7 +8,6 @@ function Login(props) {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [passwordIsCorrect, setPasswordIsCorrect] = useState(false);
-  //const [playerA, setPlayerA] = useState("");
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -22,7 +21,6 @@ function Login(props) {
       .then((res) => res.json())
       .then((response) => {
         setPasswordIsCorrect(response.passwordIsCorrect);
-        //props.setPlayerA(response.username);
       });
   };
 

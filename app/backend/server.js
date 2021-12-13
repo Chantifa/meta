@@ -2,35 +2,23 @@ const express = require("express");
 const bodyParser = require("body-parser");
 const router = express.Router();
 const app = express();
-
-// add router in express app
-app.use("/",router);
-
-//
 const http = require('http');
 const server = http.createServer(app);
 const { Server } = require("socket.io");
 const io = new Server(server);
-//
-
 const { pool } = require("./dbConfig.js");
 const bcrypt = require("bcrypt");
-//
-
-// create application/json parser
 const jsonParser = bodyParser.json()
-
 const cors = require('cors');
+
 app.use(cors());
+app.use("/",router);
 
 router.post('/users/register', jsonParser, async (req, res) => {
 
     let { nickname, email, password, password2 } = req.body;
 
-    //TODO: validation password - password2
-
-  //encrypt pass
-  hashedPassword = await bcrypt.hash(password, 10); // 10 is the number of rounds for the hash
+    hashedPassword = await bcrypt.hash(password, 10); // 10 is the number of rounds for the hash
 
   // check if the email already exists in our db
   pool.query(
@@ -50,7 +38,7 @@ router.post('/users/register', jsonParser, async (req, res) => {
                   `INSERT INTO users (name, email, password)
                   VALUES ($1, $2, $3)
                   RETURNING id, name, email,  password`,
-                  [nickname, email, hashedPassword], // these are the values $1 $2 $3, we give them names
+                  [nickname, email, hashedPassword], 
                   (err, results) => {
                       if (err) {
                           throw err;
@@ -84,7 +72,6 @@ app.post("/users/login", jsonParser,  async (req, res) => {
                 }
                 else {
                     // password does not match with the one in db
-                    // TODO: handle validation
                     res.send({ passwordIsCorrect: false })
                 }
             });
@@ -92,7 +79,6 @@ app.post("/users/login", jsonParser,  async (req, res) => {
         else {
             //if the email does not exist
             console.log("EMAIL DOES NOT EXIST in DB");
-            // TODO: validation
         }
     }
 );

@@ -8,11 +8,11 @@ class Game extends Component {
     this.gameWidth = document.documentElement.clientWidth;
     this.gameHeight = document.documentElement.clientHeight;
 
-    //TODO: save score to states and move them between components?
+    //score
     this.player1Score = 0;
     this.player2Score = 0;
 
-    //TODO: save and display the winner
+    //winner
     this.winner = "";
 
     this.isGameOver = false;
@@ -26,7 +26,7 @@ class Game extends Component {
     this.ballRadius = 6;
     this.ballSpeedY = 0;
 
-    //TODO: change the value below to select a difficulty
+    //difficulty
     this.ballSpeedX = this.Height / props.difficulty;
 
     this.paddle1Y = this.Height / 2 - this.paddleWidth / 2;
@@ -144,8 +144,6 @@ class Game extends Component {
         this.paddle2Y -= this.paddleSpeed;
       }
     }
-    // player1 paddle movement thanks to
-    // http://blog.mailson.org/2013/02/simple-pong-game-using-html5-and-canvas
     // same limits as ai for efficiency
     if (keys.isPressed(83) && this.paddle1Y + this.paddleWidth < this.Height) {
       // DOWN
